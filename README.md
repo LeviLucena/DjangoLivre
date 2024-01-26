@@ -18,7 +18,7 @@ Este é um sistema de gerenciamento para dados de saúde pública. Ele permite o
 - Relatórios detalhados sobre pacientes, hospitais e registros médicos.
 
 ## Instalação
-1. Clone o repositório: `git clone https://github.com/seu-usuario/saude-publica.git`
+1. Clone o repositório: `git clone https://github.com/LeviLucena/DjangoLivre.git`
 2. Instale as dependências: `pip install -r requirements.txt`
 3. Execute as migrações: `python manage.py migrate`
 4. Crie um superusuário: `python manage.py createsuperuser`
