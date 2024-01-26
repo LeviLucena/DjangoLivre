@@ -3,7 +3,7 @@
 ## Descrição
 Este é um sistema de gerenciamento para dados de saúde pública. Ele permite o registro de hospitais, pacientes e registros médicos, além de fornecer funcionalidades como mapas de leitos, dashboards e relatórios. *(Os dados aqui são fictícios gerados pela biblioteca faker)*
 
-![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/82305e66-0750-4255-b00d-46088b5e04b3)
+![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/3a41c484-e679-4ed3-b115-81893589a7a2)
 
 ## Tecnologias Utilizadas
 - **Django**: Framework web em Python para desenvolvimento rápido.
