@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn it renders hiperlink instead of button 1`] = `
+<a
+  class="br-sign-in"
+>
+  <!--v-if-->
+  <span>
+    Entrar
+  </span>
+  <!--v-if-->
+</a>
+`;

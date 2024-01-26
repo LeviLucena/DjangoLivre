@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header it renders Menu 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <div
+          class="header-menu-trigger"
+        >
+          
+          <br-button-stub
+            active="false"
+            aria-label="Menu"
+            block="false"
+            circle="true"
+            data-target="#main-navigation"
+            data-toggle="menu"
+            density="small"
+            disabled="false"
+            id="navigation"
+            inverted="false"
+            loading="false"
+          />
+          
+        </div>
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header it renders Title and subtitle 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <div
+            class="header-title"
+          >
+            
+            Título do Header
+            
+          </div>
+          <div
+            class="header-subtitle"
+          >
+            Subtítulo do Header
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header it renders logo image and signature 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <img
+          alt="logo"
+          class="large-img"
+          src="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-positive.png"
+        />
+        <br-divider-stub
+          class="mx-half mx-sm-1"
+          dashed="false"
+          vertical="true"
+        />
+        <div
+          class="header-sign"
+        >
+          Assinatura da Empresa
+        </div>
+      </div>
+      
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header it renders logo image with small density 1`] = `
+<header
+  class="br-header mb-4 small"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <img
+          alt="logo"
+          class="large-img"
+          src="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-positive.png"
+        />
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header set sticky header 1`] = `
+<header
+  class="br-header mb-4 sticky compact"
+  data-sticky="true"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search"
+      >
+        <br-header-search-stub
+          id="searchbox15"
+          label="Texto da pesquisa"
+          placeholder="O que você procura?"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;

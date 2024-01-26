@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BrDivider Deve renderizar a prop vertical 1`] = `
+<span
+  class="br-divider vertical"
+/>
+`;
+
+exports[`BrDivider Deve renderizar o divider 1`] = `
+<span
+  class="br-divider"
+/>
+`;

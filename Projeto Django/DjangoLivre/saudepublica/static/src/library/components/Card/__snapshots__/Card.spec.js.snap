@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Testa a renderização do card com Collapse. 1`] = `
+<div
+  class="br-card"
+>
+  <div
+    class="card-header"
+  >
+    
+    
+    <br-list
+      class="collapse-wrapper collapsed"
+    >
+      <br-item
+        hover=""
+      >
+        <div
+          class="content"
+        >
+          <div
+            class="flex-fill"
+          />
+          <icon-base-stub
+            class=""
+            familyname="fas"
+            iconname="chevron-down"
+          />
+        </div>
+      </br-item>
+      <div
+        class="collapse-content"
+        style="display: none;"
+      >
+        
+        <div
+          class="br-list mt-3"
+        >
+          <div
+            class="br-item"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-auto"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fas fa-heartbeat"
+                />
+              </div>
+              <div
+                class="col"
+              >
+                <p
+                  class="m-0"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <span
+            class="br-divider"
+          />
+          <div
+            class="br-item"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-auto"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fas fa-heartbeat"
+                />
+              </div>
+              <div
+                class="col"
+              >
+                <p
+                  class="m-0"
+                >
+                   Nesciunt, laudantium ea officiis hic tempora velit aperiam nemo accusamus nisi, eligendi ducimus! Incidunt ullam minima ratione amet sequi. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <span
+            class="br-divider"
+          />
+          <div
+            class="br-item"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="col-auto"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fas fa-heartbeat"
+                />
+              </div>
+              <div
+                class="col"
+              >
+                <p
+                  class="m-0"
+                >
+                  Voluptates, iste recusandae.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </br-list>
+    
+    
+  </div>
+  <div
+    class="card-content"
+    tabindex="0"
+  >
+    
+    
+  </div>
+  <div
+    class="card-footer"
+  >
+    
+    
+  </div>
+</div>
+`;
+
+exports[`Card Testa a renderização do slot content. 1`] = `
+<div
+  class="br-card"
+>
+  <div
+    class="card-header"
+  >
+    
+    
+  </div>
+  <div
+    class="card-content"
+    tabindex="0"
+  >
+    
+    <div
+      slot="content"
+    >
+      
+      <p>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perferendis nam porro atque ex at, numquam non optio ab eveniet error vel ad exercitationem, earum et fugiat recusandae harum? Assumenda. 
+      </p>
+      
+    </div>
+    
+  </div>
+  <div
+    class="card-footer"
+  >
+    
+    
+  </div>
+</div>
+`;
+
+exports[`Card Testa a renderização do slot footer. 1`] = `
+<div
+  class="br-card"
+>
+  <div
+    class="card-header"
+  >
+    
+    
+  </div>
+  <div
+    class="card-content"
+    tabindex="0"
+  >
+    
+    
+  </div>
+  <div
+    class="card-footer"
+  >
+    
+    <div
+      slot="footer"
+    >
+      
+      <div
+        class="d-flex"
+      >
+        <div>
+          <button
+            label="Button"
+          />
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <button
+            type="submit"
+          >
+            <span
+              slot="button-icon"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-share-alt"
+              />
+            </span>
+          </button>
+          <button
+            type="submit"
+          >
+            <span
+              slot="button-icon"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-heart"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Card Testa a renderização do slot header. 1`] = `
+<div
+  class="br-card"
+>
+  <div
+    class="card-header"
+  >
+    
+    <div
+      slot="header"
+    >
+      
+      <div
+        class="d-flex"
+      >
+        <span
+          class="br-avatar small"
+          imgsrc="https://picsum.photos/id/823/400"
+        >
+          <span
+            class="image bg-support-01 text-secondary-01"
+          >
+            J
+          </span>
+        </span>
+        <div
+          class="ml-3"
+        >
+          <p
+            class="h5 text-primary-default mb-0"
+          >
+            Maria Amorim
+          </p>
+          <span>
+            UX Designer
+          </span>
+        </div>
+        <div
+          class="ml-auto"
+        >
+          <button
+            type="submit"
+          >
+            <span
+              slot="button-icon"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-ellipsis-v"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div
+    class="card-content"
+    tabindex="0"
+  >
+    
+    
+  </div>
+  <div
+    class="card-footer"
+  >
+    
+    
+  </div>
+</div>
+`;

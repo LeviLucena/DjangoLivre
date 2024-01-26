@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`br-message emit dismiss method on closable message 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="br-message info"
+    role="alert"
+  >
+    <!--v-if-->
+    <div
+      class="content"
+    >
+      <!-- Se o usuario do componente nao passar a propriedade message indica que ele vai usar o slot -->
+      <div>
+        <!--v-if-->
+        <!--v-if-->
+        
+        
+      </div>
+    </div>
+    <div
+      class="close"
+    >
+      <button
+        aria-label="Fechar"
+        class="br-button circle small"
+        type="button"
+      >
+        <icon-base-stub
+          class=""
+          familyname="fas"
+          iconname="times"
+        />
+      </button>
+    </div>
+  </div>
+  <!--v-if-->
+  
+</div>
+`;
+
+exports[`br-message feedback has the expected html structure - snapshot 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <!--v-if-->
+  <p>
+    <span
+      class="feedback info"
+      role="alert"
+    >
+      <!--v-if-->
+      <div>
+        
+        Texto da mensagem.
+        
+      </div>
+    </span>
+  </p>
+  
+</div>
+`;
+
+exports[`br-message message has the expected html structure - snapshot 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="br-message info"
+    role="alert"
+  >
+    <!--v-if-->
+    <div
+      class="content"
+    >
+      <!-- Se o usuario do componente nao passar a propriedade message indica que ele vai usar o slot -->
+      <div>
+        <strong>
+          Titulo da mensagem
+        </strong>
+        <br />
+        
+        Texto da mensagem.
+        
+      </div>
+    </div>
+    <div
+      class="close"
+    >
+      <button
+        aria-label="Fechar"
+        class="br-button circle small"
+        type="button"
+      >
+        <icon-base-stub
+          class=""
+          familyname="fas"
+          iconname="times"
+        />
+      </button>
+    </div>
+  </div>
+  <!--v-if-->
+  
+</div>
+`;

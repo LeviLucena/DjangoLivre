@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lista de Hospitais</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Adicione o link para o DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
+            <!-- Carregue as tags estáticas -->
+            {% load static %}
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+<div class="container">
+    <div class="row">
+        <!-- Div para o retângulo preto -->
+        <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
+            <!-- Logo -->
+            <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Lista de Hospitais</h1>
+
+    <!-- Adicione links para as outras listas -->
+    <p>
+        <a href="{% url 'lista_hospitais' %}" class="btn btn-primary">Lista de Hospitais</a>
+        <a href="{% url 'lista_pacientes' %}" class="btn btn-success">Lista de Pacientes</a>
+        <a href="{% url 'lista_registros_medicos' %}" class="btn btn-danger">Registros Médicos</a>
+        <a href="{% url 'pagina_inicial' %}" class="btn btn-link">Voltar ao Inicio</a>
+       <!-- <a href="{% url 'mapa_leitos' %}" class="btn btn-warning">Mapa dos Leitos</a>
+        <a href="{% url 'dashboards' %}" class="btn btn-dark">Dashboards</a>
+        <a href="{% url 'relatorio' %}" class="btn btn-secondary">Relatório</a> -->
+    </p>
+
+    {% if hospitais %}
+        <table id="hospitaisTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Capacidade de Leitos</th>
+                    <th>Ações</th> <!-- Nova coluna para ações -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for hospital in hospitais %}
+                    <tr>
+                        <td>{{ hospital.nome }}</td>
+                        <td>{{ hospital.endereco }}</td>
+                        <td>{{ hospital.capacidade_leitos }}</td>
+                        <td>
+                            <!-- Botão Visualizar com ícone -->
+                            <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#visualizarModal{{ hospital.id }}">
+                                <span class="glyphicon glyphicon-eye-open"></span> Visualizar
+                            </a>
+
+                            <!-- Botão Editar com ícone -->
+                            <!-- <a href="#" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editarModal{{ hospital.id }}">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </a>-->
+
+                            <!-- Modal de Visualização -->
+                            <div class="modal fade" id="visualizarModal{{ hospital.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <!-- ... (código do modal de visualização) ... -->
+                            </div>
+
+                            <!-- Modal de Edição -->
+                            <div class="modal fade" id="editarModal{{ hospital.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <!-- Conteúdo do formulário de edição -->
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">Editar Hospital</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Adicione um formulário de edição aqui -->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-primary">Salvar Mudanças</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="alert alert-info">Nenhum hospital cadastrado.</p>
+    {% endif %}
+</div>
+<!-- Dentro do <style> ou no seu arquivo de estilos CSS -->
+    <style>
+        #hospitaisTable th:nth-child(4),
+        #hospitaisTable td:nth-child(4) {
+            width: 80px; /* Defina a largura desejada para a coluna Ações */
+        }
+    </style>
+
+    <!-- Rodapé -->
+<div class="container">
+    <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
+</div>
+
+<!-- Adicione os scripts do Bootstrap JS e DataTables (opcional, dependendo das suas necessidades) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Adicione o script do DataTables -->
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+
+<!-- Inicialize o DataTables -->
+<script>
+    $(document).ready(function() {
+        $('#hospitaisTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+{
+  "cSpell.allowCompoundWords": true,
+  "cSpell.enabled": true,
+  "cSpell.language": "pt-BR,en-US,lorem,pt",
+  "cSpell.words": [
+    "Web Components"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.markdownlint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.codeLens": true,
+  "editor.formatOnSave": true,
+  "editor.trimAutoWhitespace": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "markdown": "html",
+    "plaintext": "pug",
+    "vue-html": "html"
+  },
+  "gitlens.blame.ignoreWhitespace": true,
+  "gitlens.codeLens.authors.enabled": true,
+  "gitlens.codeLens.enabled": true,
+  "gitlens.codeLens.recentChange.enabled": true,
+  "gitlens.defaultDateStyle": "absolute",
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "prettier.configPath": ".prettierrc.yml",
+  "prettier.resolveGlobalModules": true,
+  "prettier.useEditorConfig": true,
+  "prettier.withNodeModules": false,
+  "todo-tree.general.statusBar": "total",
+  "todo-tree.general.tags": [
+    "ADD",
+    "DEPRECATED",
+    "DOC",
+    "FIXME",
+    "REFACTOR",
+    "REMOVE",
+    "TODO"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "ADD": {
+      "background": "#D4E5FF",
+      "foreground": "#071D41",
+      "icon": "plus-circle",
+      "iconColour": "#155BCB"
+    },
+    "DEPRECATED": {
+      "background": "#FDE0DB",
+      "foreground": "#5C1111",
+      "icon": "trash",
+      "iconColour": "#E52207"
+    },
+    "DOC": {
+      "background": "#E3F5E1",
+      "foreground": "#19311E",
+      "icon": "book",
+      "iconColour": "#168821"
+    },
+    "FIXME": {
+      "background": "#FDE0DB",
+      "foreground": "#5C1111",
+      "icon": "bug",
+      "iconColour": "#E52207"
+    },
+    "REFACTOR": {
+      "background": "#FFF5C2",
+      "foreground": "#422D19",
+      "icon": "code",
+      "iconColour": "#FFCD07"
+    },
+    "REMOVE": {
+      "background": "#FDE0DB",
+      "foreground": "#5C1111",
+      "icon": "x-circle",
+      "iconColour": "#E52207"
+    },
+    "TODO": {
+      "background": "#D4E5FF",
+      "foreground": "#071D41",
+      "icon": "tasklist",
+      "iconColour": "#155BCB"
+    }
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "gutterIcon": true
+  },
+  "todo-tree.highlights.enabled": true,
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.tree.scanAtStartup": true,
+  "todo-tree.tree.showBadges": true,
+  "todo-tree.tree.showCountsInTree": true
+}

@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`br-list Inclui item no slot default 1`] = `
+<div
+  class="br-list"
+  data-toggle="false"
+  data-unique="false"
+  density="large"
+  role="list"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="title"
+    >
+      Título do List
+    </div>
+  </div>
+  <br-divider-stub
+    dashed="false"
+    vertical="false"
+  />
+  
+  <div
+    class="item-wrapper"
+  >
+    <div
+      class="br-item align-items-center"
+    >
+      <!--v-if-->
+      <span>
+        
+        
+      </span>
+    </div>
+    <span
+      style="display: none;"
+    >
+      
+      
+    </span>
+  </div>
+  
+</div>
+`;
+
+exports[`br-list if the hideTitleDivider property hides the divider 1`] = `
+<div
+  class="br-list"
+  data-toggle="false"
+  data-unique="false"
+  density="large"
+  role="list"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="title"
+    >
+      Título do List
+    </div>
+  </div>
+  <!--v-if-->
+  
+  <div
+    class="item-wrapper"
+  >
+    <div
+      class="br-item align-items-center"
+    >
+      <!--v-if-->
+      <span>
+        
+        
+      </span>
+    </div>
+    <span
+      style="display: none;"
+    >
+      
+      
+    </span>
+  </div>
+  
+</div>
+`;
+
+exports[`br-list set density attribute large 1`] = `
+<div
+  class="br-list"
+  data-toggle="false"
+  data-unique="false"
+  density="large"
+  role="list"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="title"
+    >
+      Título do List
+    </div>
+  </div>
+  <br-divider-stub
+    dashed="false"
+    vertical="false"
+  />
+  
+  <div
+    class="item-wrapper"
+  >
+    <div
+      class="br-item align-items-center"
+    >
+      <!--v-if-->
+      <span>
+        
+        
+      </span>
+    </div>
+    <span
+      style="display: none;"
+    >
+      
+      
+    </span>
+  </div>
+  
+</div>
+`;
+
+exports[`br-list set density attribute medium 1`] = `
+<div
+  class="br-list"
+  data-toggle="false"
+  data-unique="false"
+  density="medium"
+  role="list"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="title"
+    >
+      Título do List
+    </div>
+  </div>
+  <br-divider-stub
+    dashed="false"
+    vertical="false"
+  />
+  
+  <div
+    class="item-wrapper"
+  >
+    <div
+      class="br-item align-items-center py-3"
+    >
+      <!--v-if-->
+      <span>
+        
+        
+      </span>
+    </div>
+    <span
+      style="display: none;"
+    >
+      
+      
+    </span>
+  </div>
+  
+</div>
+`;
+
+exports[`br-list set density attribute small 1`] = `
+<div
+  class="br-list"
+  data-toggle="false"
+  data-unique="false"
+  density="small"
+  role="list"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="title"
+    >
+      Título do List
+    </div>
+  </div>
+  <br-divider-stub
+    dashed="false"
+    vertical="false"
+  />
+  
+  <div
+    class="item-wrapper"
+  >
+    <div
+      class="br-item align-items-center py-4"
+    >
+      <!--v-if-->
+      <span>
+        
+        
+      </span>
+    </div>
+    <span
+      style="display: none;"
+    >
+      
+      
+    </span>
+  </div>
+  
+</div>
+`;

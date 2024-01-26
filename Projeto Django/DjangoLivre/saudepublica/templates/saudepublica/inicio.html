@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Página Inicial</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Adicione o link para o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Carregue as tags estáticas -->
+        {% load static %}
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<div class="container">
+    <div class="row">
+        <!-- Div para o retângulo preto -->
+        <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
+            <!-- Logo -->
+            <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Bem-vindo à Página Inicial</h1>
+
+    <div class="row">
+        <!-- Lista de Hospitais -->
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Lista de Hospitais</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'lista_hospitais' %}">
+                        <!-- Ícone colorido -->
+                        <i class="fas fa-hospital fa-5x" style="color: #3498db;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Pacientes -->
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Lista de Pacientes</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'lista_pacientes' %}">
+                        <!-- Ícone colorido -->
+                        <i class="fas fa-user fa-5x" style="color: #2ecc71;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registros Médicos -->
+        <div class="col-md-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Registros Médicos</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'lista_registros_medicos' %}">
+                        <!-- Ícone colorido -->
+                        <i class="fas fa-file-medical fa-5x" style="color: #e74c3c;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Mapa dos Leitos -->
+        <div class="col-md-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mapa dos Leitos</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'mapa_leitos' %}">
+                        <!-- Ícone colorido -->
+                        <i class="fas fa-bed fa-5x" style="color: #f39c12;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboards -->
+        <div class="col-md-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Dashboards</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'dashboards' %}">
+                        <!-- Ícone colorido -->
+                        <i class="fas fa-chart-bar fa-5x" style="color: #9b59b6;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relatório -->
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Relatório</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'relatorio' %}">
+                        <!-- Ícone colorido -->
+                        <i class="fas fa-file-alt fa-5x" style="color: #34495e;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<div class="container">
+    <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
+</div>
+
+<!-- Adicione os scripts do Bootstrap JS (opcional, dependendo das suas necessidades) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MagicButton set icon 1`] = `
+<div
+  class="br-magic-button medium"
+>
+  <button
+    class="br-button circle"
+    type="button"
+  >
+    <i
+      aria-hidden="true"
+      class="fas fa-car"
+    />
+     
+  </button>
+</div>
+`;

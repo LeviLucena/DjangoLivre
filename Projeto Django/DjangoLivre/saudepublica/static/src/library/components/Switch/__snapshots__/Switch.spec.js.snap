@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`br-switch Testa se as props labelChecked e labelNotChecked estão sendo renderizadas. 1`] = `
+<div
+  class="br-switch"
+>
+  <input
+    id="123"
+    type="checkbox"
+    value="OFF"
+  />
+  <label
+    for="123"
+  >
+    
+    
+    
+  </label>
+  <div
+    class="switch-data"
+    data-disabled="OFF"
+    data-enabled="ON"
+  />
+</div>
+`;

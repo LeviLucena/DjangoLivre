@@ -1,0 +1,20 @@
+<!-- adicionar_paciente.html -->
+
+{% extends 'lista_pacientes.html' %}  <!-- Substitua 'base.html' pelo seu template base, se aplicável -->
+
+{% block content %}
+  <div class="container">
+    <h2>Adicionar Novo Paciente</h2>
+
+    <form method="post" action="{% url 'adicionar_paciente' %}?next={{ request.path }}">
+      {% csrf_token %}
+      
+      <!-- Renderiza o formulário com todos os campos -->
+      {{ form.as_p }}
+      
+      <!-- Adicione outros campos conforme necessário -->
+
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+{% endblock %}

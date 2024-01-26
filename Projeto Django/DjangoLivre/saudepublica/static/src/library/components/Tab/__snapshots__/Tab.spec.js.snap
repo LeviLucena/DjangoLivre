@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabItem Deve alterar a prop title da aba (tabItem) 1`] = `
+<div
+  class="br-tab small"
+  data-counter="false"
+>
+  <nav
+    aria-label="Abas de Navegação Simples"
+    class="tab-nav"
+  >
+    <ul>
+      
+      
+    </ul>
+  </nav>
+  <div
+    class="tab-content"
+  >
+    
+    <div
+      class="tab-panel"
+      id="panel-1"
+      style="display: none;"
+    >
+      
+      <p>
+        Sobre
+      </p>
+      
+    </div>
+    <div
+      class="tab-panel"
+      id="panel-2"
+      style="display: none;"
+    >
+      
+      <p>
+        Todos
+      </p>
+      
+    </div>
+    <div
+      class="tab-panel"
+      id="panel-3"
+      style="display: none;"
+    >
+      
+      <p>
+        Notícias
+      </p>
+      
+    </div>
+    <div
+      class="tab-panel"
+      id="panel-4"
+      style="display: none;"
+    >
+      
+      <p>
+        Serviços
+      </p>
+      
+    </div>
+    <div
+      class="tab-panel"
+      id="panel-5"
+      style="display: none;"
+    >
+      
+      <p>
+        Aplicativos
+      </p>
+      
+    </div>
+    <div
+      class="tab-panel"
+      id="panel-6"
+      style="display: none;"
+    >
+      
+      <p>
+        Mídias
+      </p>
+      
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`TabItem Deve renderizar o componente tabItem 1`] = `
+<div
+  class="br-tab small"
+  data-counter="false"
+>
+  <nav
+    aria-label="Abas de Navegação Simples"
+    class="tab-nav"
+  >
+    <ul>
+      
+      
+    </ul>
+  </nav>
+  <div
+    class="tab-content"
+  >
+    
+    <tab-item-stub
+      icon=""
+      id=""
+      isactive="false"
+      results=""
+      title=""
+    />
+    
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+---
+env:
+  node: true
+parserOptions:
+  parser: "@babel/eslint-parser"
+extends:
+  - eslint:recommended
+  - plugin:vue/vue3-recommended
+  - prettier
+overrides:
+  - files:
+      - "**/src/components/**/*.spec.{j,t}s?(x)"
+    env:
+      jest: true
+root: true

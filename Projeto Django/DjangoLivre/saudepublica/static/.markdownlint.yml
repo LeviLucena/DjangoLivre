@@ -1,0 +1,29 @@
+---
+MD003:
+  style: atx
+MD004:
+  style: dash
+MD013: false
+MD024:
+  siblings_only: true
+MD033: false
+MD035:
+  style: "---"
+MD044:
+  code_blocks: false
+  html_elements: false
+  names:
+    - Design System
+    - JavaScript
+    - TypeScript
+    - Web Components
+    - Padrão Digital de Governo
+MD046:
+  style: fenced
+MD048:
+  style: backtick
+MD049:
+  style: asterisk
+MD050:
+  style: asterisk
+default: true

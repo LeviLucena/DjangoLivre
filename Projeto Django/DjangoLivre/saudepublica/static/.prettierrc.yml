@@ -1,0 +1,16 @@
+---
+bracketSpacing: true
+endOfLine: auto
+overrides:
+  - files:
+      - "**/*.css"
+      - "**/*.scss"
+      - "**/*.vue"
+      - "**/*.html"
+    options:
+      singleQuote: false
+printWidth: 120
+semi: false
+singleQuote: true
+trailingComma: es5
+tabWidth: 2

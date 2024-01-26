@@ -1,0 +1,66 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Docs/Eventos" />
+
+# Eventos
+
+Os componentes emitem [eventos customizados](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent). Esses podem ter nomes pré-determinados ou customizáveis.
+
+## Pré-determinados
+
+| Componente |                 |     Nome      |                  |
+| :--------: | :-------------: | :-----------: | :--------------: |
+| `Checkbox` |    onChange     |               |                  |
+|  `Header`  |  search-input   | search-submit | title-link-click |
+|  `Input`   |      input      |    change     |                  |
+|   `Item`   | toggle-selected |  toggle-open  |                  |
+|  `Modal `  |   close-modal   |  update-show  |                  |
+|   `Tab`    | onTabItemClick  |               |                  |
+|  `Switch`  |    onChange     |               |                  |
+
+```html
+<br-tab id="tab-exemplo">
+  <br-tab-item title="Aba 1">Conteúdo da Aba 1</br-tab-item>
+  <br-tab-item title="Aba 2">Conteúdo da Aba 2</br-tab-item>
+</br-tab>
+```
+
+```javascript
+/* Recuperando a referência ao <br-tab> no DOM e adicionando o listener de evento */
+document.getElementById('tab-exemplo').addEventListener('onTabItemClick', (e) => {
+  const clickedTabItem = e.detail[0]
+  console.log('A aba ' + clickedTabItem.title + ' foi clicada')
+})
+```
+
+## Customizáveis
+
+|   Componente   |                                                                                                                 Descrição                                                                                                                  |
+| :------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `HeaderAction` | Os atributos `list-links` e `list-functions` devem receber um array de objetos, onde cada um pode conter uma chave `clickEventName`, cujo valor será o nome do evento emitido ao clicar no referido link ou função do `<br-header-action>` |
+|     `Menu`     |                        O atributo `list` deve receber um array de objetos, onde cada um pode conter uma chave `clickEventName`, cujo valor será o nome do evento emitido ao clicar no referido item do `<br-menu>`                         |
+
+```html
+<br-menu
+  id="main-menu"
+  list="[
+  {
+    icon: 'bell',
+    name: 'Menu item 1',
+    url: '/rota-item-1',
+    clickEventName: 'click-item-1'
+  }
+]"
+></br-menu>
+```
+
+```javascript
+/* Recuperando a referência ao <br-menu> no DOM e adicionando o listener de evento */
+document.getElementById('main-menu').addEventListener('click-item-1', (e) => {
+  const clickedMenuItem = e.detail[0]
+  console.log('O item de menu ' + clickedMenuItem.name + ' foi clicado')
+  if (clickedMenuItem.url) {
+    console.log('Redirecionando para a rota ' + clickedMenuItem.url)
+  }
+})
+```

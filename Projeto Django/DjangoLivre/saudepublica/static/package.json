@@ -1,0 +1,111 @@
+{
+  "name": "@govbr-ds/webcomponents",
+  "version": "1.17.0-alpha.1",
+  "private": false,
+  "description": "Projeto de Webcomponents baseado no GovBR-DS",
+  "keywords": [
+    "design system",
+    "govbr-ds",
+    "web components",
+    "vue"
+  ],
+  "homepage": "https://gov.br/ds/webcomponents",
+  "bugs": {
+    "url": "https://gitlab.com/govbr-ds/bibliotecas/wc/govbr-ds-wc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:govbr-ds/bibliotecas/wc/govbr-ds-wc.git"
+  },
+  "license": "MIT",
+  "author": "SERPRO (http://serpro.gov.br/)",
+  "contributors": [
+    "Dataprev (https://portal3.dataprev.gov.br/)"
+  ],
+  "main": "dist/webcomponents.umd.min.js",
+  "files": [
+    "/dist/**/*",
+    "!/dist/*.html"
+  ],
+  "scripts": {
+    "build": "vue-cli-service build --target lib --inline-vue --name webcomponents src/library/lib.js",
+    "build:storybook": "build-storybook -o public",
+    "commit": "git-cz",
+    "lint:js": "vue-cli-service lint --fix",
+    "lint:md": "markdownlint -d --fix **/*.md",
+    "prepare": "chmod +x ./node_modules/husky/lib/bin.js && husky install",
+    "storybook": "start-storybook -p 6006",
+    "test:ci": "jest --config ./jest.config.js --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false",
+    "test:unit": "vue-cli-service test:unit --updateSnapshot"
+  },
+  "lint-staged": {
+    "*.md": [
+      "prettier --write",
+      "markdownlint -d --fix"
+    ],
+    "*.{js,ts,vue}": [
+      "vue-cli-service lint --fix",
+      "vue-cli-service test:unit --findRelatedTests",
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "dependencies": {
+    "core-js": "3.35.0",
+    "vue": "3.4.14",
+    "vue-the-mask": "0.11.1",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.7",
+    "@babel/eslint-parser": "7.23.3",
+    "@fullhuman/postcss-purgecss": "5.0.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "5.0.0",
+    "@govbr-ds/commit-config": "latest",
+    "@govbr-ds/core": "3.4.1",
+    "@govbr-ds/release-config": "latest",
+    "@semantic-release/exec": "6.0.3",
+    "@storybook/addon-actions": "6.5.16",
+    "@storybook/addon-docs": "6.5.16",
+    "@storybook/addon-essentials": "6.5.16",
+    "@storybook/addon-links": "6.5.16",
+    "@storybook/addons": "6.5.16",
+    "@storybook/builder-webpack5": "6.5.16",
+    "@storybook/manager-webpack5": "6.5.16",
+    "@storybook/theming": "6.5.16",
+    "@storybook/vue3": "6.5.16",
+    "@vue/cli-plugin-babel": "5.0.8",
+    "@vue/cli-plugin-eslint": "5.0.8",
+    "@vue/cli-plugin-unit-jest": "5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/compiler-sfc": "3.4.14",
+    "@vue/eslint-config-prettier": "7.1.0",
+    "@vue/test-utils": "2.4.3",
+    "@vue/vue3-jest": "27.0.0",
+    "@whitespace/storybook-addon-html": "^5.1.4",
+    "babel-loader": "^8.3.0",
+    "eslint": "8.56.0",
+    "eslint-plugin-storybook": "0.6.15",
+    "eslint-plugin-vue": "9.20.1",
+    "git-pull-run": "1.4.0",
+    "husky": "8.0.3",
+    "jest-junit": "15.0.0",
+    "lint-staged": "15.2.0",
+    "markdownlint-cli": "0.38.0",
+    "postcss": "8.4.33",
+    "prettier": "^2.8.8",
+    "react": "16.8.0 || 17.0.0",
+    "react-dom": "16.8.0 || 17.0.0",
+    "sass": "1.58.3",
+    "sass-loader": "13.2.2",
+    "semantic-release-discord": "1.2.0",
+    "storybook-version": "^0.1.1",
+    "vue-loader": "^16.8.3",
+    "vue-router": "4.1.6",
+    "vue-syntax-highlight": "^0.1.8"
+  }
+}

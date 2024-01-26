@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`br-loading Testa se a propriedade de porcentagem foi informada corretamente 1`] = `
+<div
+  style="display: block; text-align: center;"
+>
+  <div
+    class="loading medium"
+  />
+  <span
+    class="rotulo"
+  />
+</div>
+`;
+
+exports[`br-loading Testa se o componente com a barra de progresso esta renderizando. 1`] = `
+<div
+  class="br-loading"
+  data-progress="80"
+  progress="true"
+>
+  <div
+    class="br-loading-mask full"
+  >
+    <div
+      class="br-loading-fill"
+    />
+  </div>
+  <div
+    class="br-loading-mask"
+  >
+    <div
+      class="br-loading-fill"
+    />
+  </div>
+</div>
+`;
+
+exports[`br-loading Testa se o componente esta renderizando o label do loading circular 1`] = `
+<div
+  rotulo="Carregando ..."
+  style="display: block; text-align: center;"
+>
+  <div
+    class="loading"
+  />
+  <span
+    class="rotulo"
+  />
+</div>
+`;
+
+exports[`br-loading Testa se o componente esta renderizando o loading circular do tipo medium 1`] = `
+<div
+  style="display: block; text-align: center;"
+>
+  <div
+    class="loading medium"
+  />
+  <span
+    class="rotulo"
+  />
+</div>
+`;
+
+exports[`br-loading Testa se o componente esta renderizando o loading circular do tipo pequeno 1`] = `
+<div
+  style="display: block; text-align: center;"
+>
+  <div
+    class="loading"
+  />
+  <span
+    class="rotulo"
+  />
+</div>
+`;

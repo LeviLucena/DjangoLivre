@@ -1,0 +1,20 @@
+<!-- adicionar_registro_medico.html -->
+
+{% extends 'lista_registros_medicos.html' %}  <!-- Substitua 'base.html' pelo seu template base, se aplicável -->
+
+{% block content %}
+  <div class="container">
+    <h2>Adicionar Novo Registro Médico</h2>
+
+    <form method="post" action="{% url 'adicionar_registro_medico' %}?next={{ request.path }}">
+      {% csrf_token %}
+      
+      <!-- Renderiza o formulário com todos os campos -->
+      {{ form.as_p }}
+      
+  <!-- Adicione outros campos conforme necessário -->
+  
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+{% endblock %}

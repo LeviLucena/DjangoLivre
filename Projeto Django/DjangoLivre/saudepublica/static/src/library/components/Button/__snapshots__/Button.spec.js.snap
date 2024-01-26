@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button set density attribute large 1`] = `
+<button
+  aria-label=""
+  class="br-button large"
+  type="button"
+>
+  
+  <!--v-if-->
+  <span>
+    
+    
+    
+  </span>
+  
+</button>
+`;
+
+exports[`Button set density attribute middle 1`] = `
+<button
+  aria-label=""
+  class="br-button middle"
+  type="button"
+>
+  
+  <!--v-if-->
+  <span>
+    
+    
+    
+  </span>
+  
+</button>
+`;
+
+exports[`Button set density attribute small 1`] = `
+<button
+  aria-label=""
+  class="br-button small"
+  type="button"
+>
+  
+  <!--v-if-->
+  <span>
+    
+    
+    
+  </span>
+  
+</button>
+`;
+
+exports[`Button set type attribute primary 1`] = `
+<button
+  aria-label=""
+  class="br-button primary middle"
+  type="button"
+>
+  
+  <!--v-if-->
+  <span>
+    
+    
+    
+  </span>
+  
+</button>
+`;
+
+exports[`Button set type attribute secondary 1`] = `
+<button
+  aria-label=""
+  class="br-button secondary middle"
+  type="button"
+>
+  
+  <!--v-if-->
+  <span>
+    
+    
+    
+  </span>
+  
+</button>
+`;

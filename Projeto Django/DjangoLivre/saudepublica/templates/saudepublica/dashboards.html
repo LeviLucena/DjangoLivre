@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboards</title>
+    <!-- Adicione os scripts do Bootstrap JS e DataTables -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+    
+    <!-- Adicione os links para os estilos do Bootstrap e DataTables -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
+    
+    <!-- Carregue as tags estáticas -->
+    {% load static %}
+
+    <!-- Script para renderizar o gráfico Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-locale-pt-br-latest.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.58.4.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-locale-pt-br-latest.js"></script>
+    <script src="https://cdn.plot.ly/plotly.express-1.58.4.min.js"></script>
+
+    <style>
+        .grafico-subcontainer {
+    max-width: 100%; /* Ajuste o tamanho máximo conforme necessário */
+    margin: 0 auto; /* Centralize o subcontainer */
+}
+
+    </style>
+    
+
+      <!-- Dados fictícios para os gráficos -->
+      <script>
+        // Dados fictícios para o gráfico de pacientes
+        var pacientesData = [
+            { genero: 'Masculino', count: 5 },
+            { genero: 'Feminino', count: 7 },
+        ];
+
+        // Dados fictícios para o gráfico de hospitais
+        var hospitaisData = [
+        { nome: 'Chapman, Zamora and Brown', capacidade_leitos: 451 },
+        { nome: 'Collins Ltd', capacidade_leitos: 62 },
+        { nome: 'Duran, Marshall and Oliver', capacidade_leitos: 427 },
+        { nome: 'Fernandez, Russell and Baird', capacidade_leitos: 425 },
+        { nome: 'Hansen, Rodriguez and Hicks', capacidade_leitos: 187 },
+        { nome: 'Harris-Johnson', capacidade_leitos: 433 },
+        { nome: 'Johnson, Sellers and Cooper', capacidade_leitos: 52 },
+        { nome: 'Lopez, Cunningham and Walker', capacidade_leitos: 399 },
+        { nome: 'Miranda PLC', capacidade_leitos: 332 },
+        { nome: 'Ramirez-Reed', capacidade_leitos: 51 },
+        ];
+
+        // Dados fictícios para o gráfico de registros médicos
+        var registrosMedicosData = [
+            { diagnostico: 'Gripe', count: 15 },
+            { diagnostico: 'Fratura', count: 10 },
+            { diagnostico: 'Outro', count: 20 },
+        ];
+
+        // Função para criar um gráfico Plotly Express com dados fictícios
+        function criarGrafico(data, layout, idDiv) {
+            Plotly.newPlot(idDiv, data, layout);
+        }
+
+        // Código para criar gráficos utilizando Plotly Express com dados fictícios
+        var figPacientes = px.pie(pacientesData, values='count', names='genero');
+        criarGrafico(figPacientes, { title: 'Gráfico de Pacientes', showlegend: false }, 'grafico-pacientes');
+
+        var figHospitais = px.bar(hospitaisData, x='nome', y='capacidade_leitos', text='capacidade_leitos');
+        criarGrafico(figHospitais, { title: 'Gráfico de Hospitais', showlegend: false }, 'grafico-hospitais');
+
+        var figRegistros = px.pie(registrosMedicosData, values='count', names='diagnostico');
+        criarGrafico(figRegistros, { title: 'Gráfico de Registros Médicos', showlegend: false }, 'grafico-registros');
+    </script>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="container">
+        <div class="row">
+            <!-- Div para o retângulo preto -->
+            <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
+                <!-- Logo -->
+                <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione uma nova seção para a tabela -->
+    <div class="container">
+        <h1>Dashboards</h1>
+
+        <!-- Adicione links para as outras listas -->
+        <p>
+            <a href="{% url 'mapa_leitos' %}" class="btn btn-warning">Mapa de Leitos</a>
+            <a href="{% url 'dashboards' %}" class="btn btn-info">Dashboards</a>
+            <a href="{% url 'relatorio' %}" class="btn btn-info">Relatórios</a>
+            <a href="{% url 'pagina_inicial' %}" class="btn btn-link">Voltar ao Inicio</a>
+        </p>
+    </div>
+
+<!-- Adicione um elemento div para o gráfico de pacientes e registros médicos -->
+<div class="container grafico-container">
+    <div class="row">
+        <!-- Coluna para o gráfico de pacientes -->
+        <div class="col-md-6">
+            <div class="grafico-subcontainer" id="grafico-pacientes"></div>
+        </div>
+
+        <!-- Coluna para o gráfico de registros médicos -->
+        <div class="col-md-6">
+            <div class="grafico-subcontainer" id="grafico-registros"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Adicione scripts para renderizar o gráfico -->
+<script>
+    // Dados fictícios para o gráfico de pacientes
+    var pacientesData = [
+        { genero: 'Masculino', count: 5 },
+        { genero: 'Feminino', count: 7 },
+    ];
+
+    // Código para criar um gráfico de pizza utilizando Plotly Express com dados fictícios
+    var figPacientes = [{
+        values: pacientesData.map(item => item.count),
+        labels: pacientesData.map(item => item.genero),
+        type: 'pie'
+    }];
+
+    // Configurações do layout
+    var layout = { title: 'Quantidade de Pacientes por Gênero' };
+
+        // Dados fictícios para o gráfico de registros médicos
+        var registrosMedicosData = [
+        { diagnostico: 'Enxaqueca', count: 4 },
+        { diagnostico: 'Gripe', count: 5 },
+        { diagnostico: 'Labirintite', count: 1  },
+    ];
+
+    // Código para criar um gráfico de pizza utilizando Plotly Express com dados fictícios
+    var figRegistros = [{
+        values: registrosMedicosData.map(item => item.count),
+        labels: registrosMedicosData.map(item => item.diagnostico),
+        type: 'pie'
+    }];
+
+    // Configurações do layout para o terceiro gráfico
+    var layoutRegistros = { title: 'Distribuição de Registros Médicos', showlegend: false };
+
+    // Renderize o gráfico de pacientes
+    Plotly.newPlot('grafico-pacientes', figPacientes, layout)
+        .then(function() {
+            console.log('Gráfico de pacientes renderizado com sucesso!');
+        })
+        .catch(function(err) {
+            console.error('Erro ao renderizar o gráfico de pacientes:', err);
+        });
+
+    // Renderize o gráfico de registros médicos
+    Plotly.newPlot('grafico-registros', figRegistros, layoutRegistros)
+        .then(function() {
+            console.log('Gráfico de registros médicos renderizado com sucesso!');
+        })
+        .catch(function(err) {
+            console.error('Erro ao renderizar o gráfico de registros médicos:', err);
+        });
+</script>
+
+<!-- Adicione um elemento div para o segundo gráfico -->
+<div id="grafico-hospitais" class="container"></div>
+
+<!-- Adicione scripts para renderizar o segundo gráfico -->
+<script>
+    // Dados fictícios para o gráfico de hospitais
+    var hospitaisData = [
+        { nome: 'Chapman, Zamora and Brown', capacidade_leitos: 451 },
+        { nome: 'Collins Ltd', capacidade_leitos: 62 },
+        { nome: 'Duran, Marshall and Oliver', capacidade_leitos: 427 },
+        { nome: 'Fernandez, Russell and Baird', capacidade_leitos: 425 },
+        { nome: 'Hansen, Rodriguez and Hicks', capacidade_leitos: 187 },
+        { nome: 'Harris-Johnson', capacidade_leitos: 433 },
+        { nome: 'Johnson, Sellers and Cooper', capacidade_leitos: 52 },
+        { nome: 'Lopez, Cunningham and Walker', capacidade_leitos: 399 },
+        { nome: 'Miranda PLC', capacidade_leitos: 332 },
+        { nome: 'Ramirez-Reed', capacidade_leitos: 51 },
+    ];
+
+    // Ordenar hospitais pelo número de leitos (do maior para o menor)
+    hospitaisData.sort((a, b) => b.capacidade_leitos - a.capacidade_leitos);
+
+    // Código para criar um gráfico de barras horizontais utilizando Plotly Express com dados fictícios
+    var figHospitais = [{
+        y: hospitaisData.map(item => item.nome),
+        x: hospitaisData.map(item => item.capacidade_leitos),
+        type: 'bar',
+        orientation: 'h',
+        text: hospitaisData.map(item => item.capacidade_leitos),
+        marker: {
+            color: 'rgb(0, 102, 204)',
+        }
+    }];
+
+    // Configurações do layout para o segundo gráfico
+    var layoutHospitais = {
+        title: 'Quantidade de Leitos por Hospitais',
+        showlegend: false,
+        xaxis: { title: 'Capacidade de Leitos' },
+        yaxis: { title: 'Hospitais', automargin: true, categoryorder: 'total ascending' }
+    };
+
+    // Renderize o segundo gráfico
+    Plotly.newPlot('grafico-hospitais', figHospitais, layoutHospitais)
+        .then(function() {
+            console.log('Segundo gráfico renderizado com sucesso!');
+        })
+        .catch(function(err) {
+            console.error('Erro ao renderizar o segundo gráfico:', err);
+        });
+</script>
+
+
+
+
+    <!-- Rodapé -->
+    <div class="container">
+        <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
+    </div>
+
+    <!-- Inicialize o DataTables -->
+    <script>
+        $(document).ready(function() {
+            $('#hospitaisTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

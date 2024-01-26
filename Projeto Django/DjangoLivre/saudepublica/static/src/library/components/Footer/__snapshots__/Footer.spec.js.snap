@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer it renders social networks 1`] = `
+<footer
+  class="br-footer"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="logo"
+    >
+      <img
+        alt="descricao-da-logo"
+        src="https://url-da-logo"
+      />
+    </div>
+    <div
+      class="br-list horizontal"
+      data-toggle="true"
+      data-unique="true"
+      density="large"
+      role="list"
+    >
+      <!--v-if-->
+      <!--v-if-->
+      
+      
+      <div
+        class="col-2"
+      >
+        <a
+          class="br-item header"
+          href="javascript:void(0)"
+        >
+          <div
+            class="content text-down-01 text-bold text-uppercase"
+          >
+            Categoria 1
+          </div>
+          <!--v-if-->
+        </a>
+        <div
+          class="br-list"
+        >
+          <span
+            class="br-divider d-md-none"
+          />
+          
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 1
+            </div>
+          </a>
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 2
+            </div>
+          </a>
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 3
+            </div>
+          </a>
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 4
+            </div>
+          </a>
+          
+          <span
+            class="br-divider d-md-none"
+          />
+        </div>
+      </div>
+      <div
+        class="col-2"
+      >
+        <a
+          class="br-item header"
+          href="javascript:void(0)"
+        >
+          <div
+            class="content text-down-01 text-bold text-uppercase"
+          >
+            Categoria 2
+          </div>
+          <!--v-if-->
+        </a>
+        <div
+          class="br-list"
+        >
+          <span
+            class="br-divider d-md-none"
+          />
+          
+          <a
+            class="br-item"
+            href="http://www.google.com"
+          >
+            <div
+              class="content"
+            >
+              item 5
+            </div>
+          </a>
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 6
+            </div>
+          </a>
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 7
+            </div>
+          </a>
+          <a
+            class="br-item"
+            href="/item1"
+          >
+            <div
+              class="content"
+            >
+              item 8
+            </div>
+          </a>
+          
+          <span
+            class="br-divider d-md-none"
+          />
+        </div>
+      </div>
+      
+      
+    </div>
+    <div
+      class="d-none d-sm-block"
+    >
+      <div
+        class="row align-items-end justify-content-between py-5"
+      >
+        <div
+          class="col social-network"
+        >
+          <div
+            class="social-network-title"
+          >
+            Título
+          </div>
+          <div
+            class="d-flex"
+          >
+            
+            <a
+              class="mr-3"
+              href="#"
+              title="descricao-da-rede-social"
+            >
+              <img
+                alt="descricao-da-rede-social"
+                src="https://url-da-rede-social"
+              />
+              <!--v-if-->
+            </a>
+            <a
+              class="mr-3"
+              href="#"
+              title="descricao-da-rede-social"
+            >
+              <img
+                alt="descricao-da-rede-social"
+                src="https://url-da-rede-social"
+              />
+              <!--v-if-->
+            </a>
+            <a
+              class="br-button circle"
+              href="#"
+              title="Facebook"
+            >
+              <!--v-if-->
+              <i
+                aria-hidden="true"
+                class="fab fa-facebook-f"
+              />
+            </a>
+            <a
+              class="br-button circle"
+              href="#"
+              title="Twitter"
+            >
+              <!--v-if-->
+              <i
+                aria-hidden="true"
+                class="fab fa-twitter"
+              />
+            </a>
+            
+          </div>
+        </div>
+        <div
+          class="col assigns text-right"
+        >
+          
+          <a
+            href="#"
+          >
+            <img
+              alt="descricao-do-parceiro"
+              class="ml-4 logo-footer-ajuste"
+              src="https://url-do-parceiro"
+            />
+          </a>
+          <a
+            href="#"
+          >
+            <img
+              alt="descricao-do-parceiro"
+              class="ml-4 logo-footer-ajuste"
+              src="https://url-do-parceiro"
+            />
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    class="br-divider my-3"
+  />
+  <div
+    class="container-lg"
+  >
+    <div
+      class="info"
+    >
+      <div
+        class="text-down-01 text-extra-bold pb-3 text-center"
+      >
+        hello
+      </div>
+    </div>
+  </div>
+</footer>
+`;

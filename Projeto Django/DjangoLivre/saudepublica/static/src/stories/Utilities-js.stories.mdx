@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Docs/Utilitários JS" />
+
+# Utilitários Javascript
+
+> São capazes de fornecer funcionalidades dinâmicas para a interface, como efeitos de animação, respostas às iterações de usuários, entre outros comportamentos. - <cite>[Padrão Digital de Governo](https://www.gov.br/ds/utilitarios/visao-geral)</cite>
+
+## Tooltip
+
+São alertas flutuantes que proporcionam ao usuário um feedback do sistema, informando sobre algum aspecto da interface que mereça maior atenção.
+
+1. [Como consumir](#como-consumir)
+1. [Exemplo de consumo - Propriedades](#exemplo-de-consumo---como-propriedades)
+1. [Exemplo de consumo - Propriedades que recebem JSON](#exemplo-de-consumo---como-propriedades-que-recebem-json)
+
+### Como consumir
+
+O modelo/exemplo de uso do tooltip encontra-se disponível nas stories dos webcomponets.
+
+Todos os webcomponentes (com exceção do Divider, Message, Card e List) possuem propriedades inerentes ao tooltip:
+
+|   Propriedade   |                     Descrição                      |
+| :-------------: | :------------------------------------------------: |
+| `tooltip-text`  |         Texto que vai aparecer no tooltip          |
+| `tooltip-place` |  Localização do tooltip(top, right, left, bottom)  |
+| `tooltip-type`  |   Tipo de tooltip(info, warning, error, success)   |
+| `tooltip-timer` | Tempo em que o tooltip fica aberto em milisegundos |
+
+### Exemplo de consumo - Como propriedades
+
+```html
+<br-button
+  icon=""
+  label="Botão com tooltip"
+  type="primary"
+  tooltip-text="Lorem ipsum dolor sit amet."
+  tooltip-type="warning"
+></br-button>
+```
+
+### Exemplo de consumo - Como propriedades que recebem JSON
+
+```html
+<br-breadcrumb
+  label="Breadcrumb Curto"
+  links="[
+    {
+      'label': 'Página Inicial',
+      'url': '/',
+      'target': '_blank',
+      'home': true,
+      'tooltipText': 'Lorem ipsum dolor sit amet.'
+    },
+    {
+      'label': 'Página Ancestral 01',
+      'target': '_blank',
+      'url': '#'
+    }
+  ]"
+></br-breadcrumb>
+```

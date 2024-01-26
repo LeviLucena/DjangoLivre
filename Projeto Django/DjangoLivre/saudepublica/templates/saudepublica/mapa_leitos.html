@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mapa de Leitos</title>
+    <!-- Adicione os scripts do Bootstrap JS e DataTables -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+    
+    <!-- Adicione os links para os estilos do Bootstrap e DataTables -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
+
+      <!-- Adicione a biblioteca Leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Carregue as tags estáticas -->
+    {% load static %}
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="container">
+        <div class="row">
+            <!-- Div para o retângulo preto -->
+            <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
+                <!-- Logo -->
+                <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione uma nova seção para a tabela -->
+    <div class="container">
+        <h1>Mapa de Leitos</h1>
+
+        <!-- Adicione links para as outras listas -->
+        <p>
+            <a href="{% url 'mapa_leitos' %}" class="btn btn-warning">Mapa de Leitos</a>
+            <a href="{% url 'dashboards' %}" class="btn btn-info">Dashboards</a>
+            <a href="{% url 'relatorio' %}" class="btn btn-info">Relatórios</a>
+            <a href="{% url 'pagina_inicial' %}" class="btn btn-link">Voltar ao Inicio</a>
+        </p>
+    </div>
+
+    <!-- Conteúdo específico para o mapa de leitos vai aqui -->
+    <div id="map" style="height: 400px;" class="container"></div>
+
+    <!-- Rodapé -->
+    <div class="container">
+        <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
+    </div>
+
+    <!-- Inicialize o DataTables -->
+    <script>
+        $(document).ready(function() {
+            $('#hospitaisTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+                }
+            });
+        });
+    </script>
+
+<!-- Inicialize o mapa -->
+<script>
+    // Crie um mapa com Leaflet e use tiles do OpenStreetMap
+    var mymap = L.map('map').setView([-23.5505, -46.6333], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(mymap);
+
+    // Função para gerar coordenadas aleatórias dentro de uma área específica
+    function getRandomCoordinates(center, radius, numPoints) {
+        var coordinates = [];
+        for (var i = 0; i < numPoints; i++) {
+            var angle = Math.random() * Math.PI * 2;
+            var distance = Math.random() * radius;
+            var latitude = center[0] + distance * Math.cos(angle);
+            var longitude = center[1] + distance * Math.sin(angle);
+            coordinates.push([latitude, longitude]);
+        }
+        return coordinates;
+    }
+
+    // Adicione marcadores para hospitais (exemplo fictício)
+    var hospitalCoordinates = getRandomCoordinates([-23.5505, -46.6333], 0.2, 20);
+
+    hospitalCoordinates.forEach(function (coord, index) {
+        var hospitalMarker = L.marker(coord).addTo(mymap);
+        hospitalMarker.bindPopup("<b>Hospital " + (index + 1) + "</b><br>Capacidade de Leitos: " + Math.floor(Math.random() * 200));
+    });
+</script>
+
+
+</body>
+</html>

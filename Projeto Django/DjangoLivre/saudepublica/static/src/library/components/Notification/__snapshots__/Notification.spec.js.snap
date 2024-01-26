@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`br-notification matches snapshot 1`] = `
+<div
+  class="br-notification"
+>
+  <div
+    class="notification-header"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-10"
+      >
+        
+        <span
+          class="text-bold"
+        >
+          title example
+        </span>
+        <br />
+        
+        
+        <small>
+          <a>
+            subtitle example
+          </a>
+        </small>
+        <br />
+        
+        
+        
+      </div>
+      <div
+        class="col-2"
+      >
+        <div
+          class="text-right"
+        >
+          <button
+            aria-label="Fechar"
+            class="br-button middle circle"
+            id="close"
+            type="button"
+          >
+            
+            <icon-base-stub
+              class=""
+              familyname="fas"
+              iconname="times"
+            />
+            <!--v-if-->
+            
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="notification-body"
+  >
+    <div
+      class="br-tab small"
+      data-counter="false"
+    >
+      <nav
+        aria-label="Abas de Navegação Simples"
+        class="tab-nav"
+      >
+        <ul>
+          
+          
+        </ul>
+      </nav>
+      <div
+        class="tab-content"
+      >
+        
+        
+        <div
+          class="tab-panel"
+          id=""
+          style="display: none;"
+        >
+          
+          <div
+            class="br-list"
+            data-toggle="false"
+            data-unique="false"
+            density="large"
+            role="list"
+          >
+            <!--v-if-->
+            <!--v-if-->
+            
+            
+            <div>
+              <button
+                class="br-item disabled"
+                type="button"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <icon-base-stub
+                  class=""
+                  familyname="fas"
+                  iconname="heartbeat"
+                />
+                 Link disable
+              </button>
+              <span
+                class="br-divider"
+              />
+            </div>
+            <div>
+              <button
+                class="br-item"
+                type="button"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <icon-base-stub
+                  class=""
+                  familyname="fas"
+                  iconname="heartbeat"
+                />
+                 Link de acesso
+              </button>
+              <span
+                class="br-divider"
+              />
+            </div>
+            <div>
+              <a
+                href="https://www.google.com"
+              >
+                <button
+                  class="br-item"
+                  type="button"
+                >
+                  <!--v-if-->
+                  <!--v-if-->
+                  <!--v-if-->
+                  <icon-base-stub
+                    class=""
+                    familyname="fas"
+                    iconname="heartbeat"
+                  />
+                   Link Google
+                </button>
+              </a>
+              <span
+                class="br-divider"
+              />
+            </div>
+            
+            
+          </div>
+          
+        </div>
+        <div
+          class="tab-panel"
+          id=""
+          style="display: none;"
+        >
+          
+          <div
+            class="br-list"
+            data-toggle="false"
+            data-unique="false"
+            density="large"
+            role="list"
+          >
+            <!--v-if-->
+            <!--v-if-->
+            
+            
+            <div>
+              <button
+                class="br-item disabled"
+                type="button"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <icon-base-stub
+                  class=""
+                  familyname="fas"
+                  iconname="heartbeat"
+                />
+                 Link disable
+              </button>
+              <span
+                class="br-divider"
+              />
+            </div>
+            <div>
+              <button
+                class="br-item"
+                type="button"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <icon-base-stub
+                  class=""
+                  familyname="fas"
+                  iconname="heartbeat"
+                />
+                 Link de acesso
+              </button>
+              <span
+                class="br-divider"
+              />
+            </div>
+            <div>
+              <a
+                href="https://www.google.com"
+              >
+                <button
+                  class="br-item"
+                  type="button"
+                >
+                  <!--v-if-->
+                  <!--v-if-->
+                  <!--v-if-->
+                  <icon-base-stub
+                    class=""
+                    familyname="fas"
+                    iconname="heartbeat"
+                  />
+                   Link Google
+                </button>
+              </a>
+              <span
+                class="br-divider"
+              />
+            </div>
+            
+            
+          </div>
+          
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;

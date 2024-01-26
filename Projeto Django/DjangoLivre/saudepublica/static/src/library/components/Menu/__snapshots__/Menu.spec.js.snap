@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`br-menu checks if the menu footer has a list of social networks and socialTitle 1`] = `
+<div
+  class="br-menu active"
+  id="br-menu-33"
+>
+  <!--v-if-->
+  <div
+    class="menu-container active"
+  >
+    <div
+      class="menu-panel"
+    >
+      <div
+        class="menu-header"
+      >
+        <!--v-if-->
+        <div
+          class="menu-close"
+        >
+          <br-button-stub
+            active="false"
+            aria-label="Fechar o menu"
+            block="false"
+            circle="true"
+            data-dismiss="menu"
+            density="middle"
+            disabled="false"
+            icon="times"
+            inverted="false"
+            loading="false"
+          />
+        </div>
+      </div>
+      <nav
+        class="menu-body"
+      >
+        <!-- Primeiro Nível -->
+        
+        
+      </nav>
+      <div
+        class="menu-footer"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <div
+          class="social-network"
+        >
+          <div
+            class="social-network-title"
+          >
+            Redes Sociais
+          </div>
+          <div
+            class="d-flex"
+          >
+            
+            <div
+              class="share"
+            >
+              <a
+                aria-label="Compartilhar por Facebook"
+                class="br-button circle"
+                href="#"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fab fa-facebook-f"
+                />
+              </a>
+            </div>
+            <div
+              class="share"
+            >
+              <a
+                aria-label="Compartilhar por Linkedin"
+                class="br-button circle"
+                href="#"
+              >
+                <i
+                  aria-hidden="true"
+                  class="fab fa-linkedin-in"
+                />
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    <br-scrim-stub
+      autofocuscontent="false"
+      centercontent="false"
+      data-dismiss="menu"
+      disablecloseonclick="false"
+      show="true"
+      tabindex="0"
+    />
+  </div>
+</div>
+`;

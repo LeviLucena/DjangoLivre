@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BrAvatar has the expected html structure 1`] = `
+<span
+  class="br-avatar small"
+>
+  <span
+    class="image bg-support-01 text-secondary-01"
+  >
+    J
+  </span>
+</span>
+`;

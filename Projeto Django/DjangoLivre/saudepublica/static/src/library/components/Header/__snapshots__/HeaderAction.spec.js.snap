@@ -1,0 +1,2499 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderAction - Functions checks if the openFunctions method is called and if it closes openLinks and vice-versa 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown show"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="active br-button small circle active"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction - Functions checks if the openFunctions method is called and if it closes openLinks and vice-versa 2`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown show"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="active br-button small circle active"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction - Functions checks if the openLinks method is called and if it closes openFunctions and vice-versa 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown show"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="active br-button small circle active"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction - Functions checks if the openLinks method is called and if it closes openFunctions and vice-versa 2`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown show"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="active br-button small circle active"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction - Links it renders links 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown"
+          >
+            <br-button-stub
+              active="false"
+              aria-label="Acesso Rápido"
+              block="false"
+              circle="true"
+              class=""
+              data-toggle="dropdown"
+              density="small"
+              disabled="false"
+              inverted="false"
+              loading="false"
+            />
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="http://www.link"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction checks if the onResize method is called 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown show"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="active br-button small circle active"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction checks if the onResize method is called 2`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <div
+            class="header-links dropdown"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction it calls openInputSearch method and checks if showFunction is false 1`] = `
+<header
+  class="br-header mb-4 compact"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+          style="float: right;"
+        >
+          <div
+            class="header-links dropdown"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown show"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="active br-button small circle active"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div
+            class="header-search-trigger"
+            style="display: block;"
+          >
+            <button
+              aria-label="Abrir Busca"
+              class="br-button middle circle"
+              data-target=".header-search"
+              data-toggle="search"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="search"
+              />
+              <!--v-if-->
+              
+            </button>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search"
+      >
+        <br-header-search-stub
+          id="searchbox29"
+          label="Texto da pesquisa"
+          placeholder="O que você procura?"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction it calls openInputSearch method and checks if showFunction is false 2`] = `
+<header
+  class="br-header mb-4 compact"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+          style="float: right;"
+        >
+          <div
+            class="header-links dropdown"
+          >
+            <button
+              aria-label="Acesso Rápido"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="ellipsis-v"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Acesso Rápido
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper"
+                name="Link de acesso 1"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 1"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 1
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 1
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 2"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 2"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 2
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 2
+                  
+                </span>
+              </div>
+              <div
+                class="item-wrapper"
+                name="Link de acesso 3"
+              >
+                <a
+                  class="br-item"
+                  data-toggle="selection"
+                  href="#"
+                  name="Link de acesso 3"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    Link de acesso 3
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  Link de acesso 3
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <br-divider-stub
+            class="mx-half mx-sm-1"
+            dashed="false"
+            vertical="true"
+          />
+          <div
+            class="header-functions dropdown"
+          >
+            <button
+              aria-label="Funcionalidades do Sistema"
+              class="br-button small circle"
+              data-toggle="dropdown"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="th"
+              />
+              
+            </button>
+            <div
+              class="br-list"
+              data-toggle="false"
+              data-unique="false"
+              density="large"
+              role="list"
+            >
+              <div
+                class="header"
+              >
+                <div
+                  class="title"
+                >
+                  Funcionalidades do Sistema
+                </div>
+              </div>
+              <!--v-if-->
+              
+              
+              <div
+                class="item-wrapper align-items-center"
+              >
+                <a
+                  class="align-items-center br-item"
+                  href="#"
+                >
+                  <div
+                    class="content"
+                  >
+                    
+                    <button
+                      aria-label=""
+                      class="br-button small circle"
+                      title="Funcionalidade 1"
+                      type="button"
+                    >
+                      
+                      <icon-base-stub
+                        class=""
+                        familyname="fas"
+                        iconname="chart-bar"
+                      />
+                      <span
+                        class="text"
+                      >
+                        Funcionalidade 1
+                      </span>
+                      
+                    </button>
+                    
+                  </div>
+                </a>
+                <span
+                  style="display: none;"
+                >
+                  
+                  <button
+                    aria-label=""
+                    class="br-button small circle"
+                    title="Funcionalidade 1"
+                    type="button"
+                  >
+                    
+                    <icon-base-stub
+                      class=""
+                      familyname="fas"
+                      iconname="chart-bar"
+                    />
+                    <span
+                      class="text"
+                    >
+                      Funcionalidade 1
+                    </span>
+                    
+                  </button>
+                  
+                </span>
+              </div>
+              
+              
+            </div>
+          </div>
+          <div
+            class="header-search-trigger"
+            style="display: block;"
+          >
+            <button
+              aria-label="Abrir Busca"
+              class="br-button middle circle"
+              data-target=".header-search"
+              data-toggle="search"
+              type="button"
+            >
+              
+              <icon-base-stub
+                class=""
+                familyname="fas"
+                iconname="search"
+              />
+              <!--v-if-->
+              
+            </button>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search active"
+      >
+        <br-header-search-stub
+          id="searchbox29"
+          label="Texto da pesquisa"
+          placeholder="O que você procura?"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction it renders Login button 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div
+          class="header-actions"
+        >
+          <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
+          <!--v-if-->
+          <div
+            class="header-login"
+          >
+            <div
+              class="header-sign-in"
+            >
+              <button
+                aria-label=""
+                class="sign-in br-button small sign-in"
+                data-trigger="login"
+                type="button"
+              >
+                
+                <icon-base-stub
+                  class=""
+                  familyname="fas"
+                  iconname="user"
+                />
+                <span
+                  class="d-sm-inline"
+                >
+                  Entrar
+                </span>
+                
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</header>
+`;
+
+exports[`HeaderAction it renders Search Button in compact mode 1`] = `
+<header
+  class="br-header mb-4 compact"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div>
+          <div
+            class="header-actions"
+            style="float: right;"
+          >
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+            <div
+              class="header-search-trigger"
+              style="display: block;"
+            >
+              <br-header-action-search-stub />
+            </div>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search"
+      >
+        <br-header-search-stub
+          id="searchbox1"
+          label="Texto da pesquisa"
+          placeholder="O que você procura?"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;

@@ -1,0 +1,87 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'saudepublica/imagens/bi.ico' %}">
+
+    <link rel="stylesheet" href="https://docs-ds.estaleiro.serpro.gov.br/docs/ds/dist/core.min.css">
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Painel de Gestão de Saúde Pública</title>
+
+    <style>
+        .navbar-brand img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .fa-chart-bar {
+            font-size: 1.5em;
+        }
+
+        /* Adicionando estilos ao botão 'Entrar com gov.br' */
+        .btn-govbr {
+            background-color: #00a859;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        function validarFormulario() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Por favor, preencha todos os campos.");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1><i class="fas fa-chart-bar"></i> Painel de Gestão da Saúde</h1>
+            <p>Por favor, faça login para acessar o painel.</p>
+            <form method="post" action="{% url 'login' %}" onsubmit="return validarFormulario()">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg">Logar</button>
+                <button class="btn btn-govbr btn-lg mt-3 mt-sm-0 ml-sm-3" type="button">
+                    Entrar com <span class="text-black">gov.br</span>
+                </button>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <p style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">{{ message }}</p> 
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

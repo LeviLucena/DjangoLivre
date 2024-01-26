@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input checks if the toggleIcon method is called 1`] = `
+<div
+  class="br-input input-button"
+>
+  <!--v-if-->
+  <!--v-if-->
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <input
+    id="br-input-44"
+    type="password"
+  />
+  <!--v-if-->
+  <button
+    aria-label=""
+    class="br-button small circle"
+    type="button"
+  >
+    
+    <i
+      aria-hidden="true"
+      class="fas fa-eye-slash"
+    />
+    <!--v-if-->
+    
+  </button>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Input checks if the toggleIcon method is called 2`] = `
+<div
+  class="br-input input-button"
+>
+  <!--v-if-->
+  <!--v-if-->
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <input
+    id="br-input-44"
+    type="text"
+  />
+  <!--v-if-->
+  <button
+    aria-label=""
+    class="br-button small circle"
+    type="button"
+  >
+    
+    <i
+      aria-hidden="true"
+      class="fas fa-eye"
+    />
+    <!--v-if-->
+    
+  </button>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Input has the expected html structure 1`] = `
+<div
+  class="br-input"
+>
+  <!--v-if-->
+  <!--v-if-->
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <input
+    id="br-input-22"
+    type="text"
+  />
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
+</div>
+`;
+
+exports[`Input set is-highlight 1`] = `
+<div
+  class="br-input input-highlight"
+>
+  <!--v-if-->
+  <!--v-if-->
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <input
+    id="br-input-17"
+    type="text"
+  />
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
+</div>
+`;
+
+exports[`Input set label-inline and icon-sign attributes 1`] = `
+<div
+  class="br-input input-inline"
+>
+  <!--v-if-->
+  <div
+    class="input-label"
+  >
+    <label
+      class="text-nowrap"
+      for="br-input-11"
+    >
+      Label do input
+    </label>
+  </div>
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <!--v-if-->
+  <div
+    class="input-content"
+  >
+    <div
+      class="input-group"
+    >
+      <div
+        class="input-icon"
+      >
+        <icon-base-stub
+          class=""
+          familyname="fas"
+          iconname="edit"
+        />
+      </div>
+      <input
+        id="br-input-11"
+        type="text"
+      />
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</div>
+`;
+
+exports[`Input set label-inline attribute 1`] = `
+<div
+  class="br-input input-inline"
+>
+  <!--v-if-->
+  <div
+    class="input-label"
+  >
+    <label
+      class="text-nowrap"
+      for="br-input-9"
+    >
+      Label do input
+    </label>
+  </div>
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <div
+    class="input-content"
+  >
+    <input
+      id="br-input-9"
+      type="text"
+    />
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
+</div>
+`;
+
+exports[`Input when is-password is passed as a prop, type must be "password" 1`] = `
+<div
+  class="br-input input-button"
+>
+  <!--v-if-->
+  <!--v-if-->
+  <!-- Input com máscaras -->
+  <!--v-if-->
+  <!-- Input sem máscaras -->
+  <input
+    id="br-input-41"
+    type="password"
+  />
+  <!--v-if-->
+  <br-button-stub
+    active="false"
+    block="false"
+    circle="true"
+    density="small"
+    icon="eye-slash"
+    inverted="false"
+    loading="false"
+  />
+  <!--v-if-->
+</div>
+`;

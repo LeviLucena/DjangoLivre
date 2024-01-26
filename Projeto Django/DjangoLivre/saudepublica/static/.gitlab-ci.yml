@@ -1,0 +1,166 @@
+include:
+  - template: Code-Quality.gitlab-ci.yml
+  - template: Jobs/Dependency-Scanning.latest.gitlab-ci.yml
+  - template: Jobs/Secret-Detection.latest.gitlab-ci.yml
+  - template: Jobs/SAST.latest.gitlab-ci.yml
+
+image: node:20.11.0-alpine
+
+cache:
+  paths:
+    - node_modules
+
+stages:
+  - Qualidade
+  - Dependências
+  - test
+  - Build
+  - Storybook
+  - Release
+
+code_quality:
+  stage: Qualidade
+  variables:
+    REPORT_FORMAT: html
+  artifacts:
+    paths: [gl-code-quality-report.html]
+    expire_in: 1 week
+    expose_as: 'Code Quality Report'
+  rules:
+  - when: always
+
+Jest:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - coverage/
+    reports:
+      junit:
+        - junit.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
+    expire_in: 1 week
+    expose_as: 'JEST Tests Report'
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  script:
+    - npm i vue
+    - npm run test:ci
+  rules:
+  - when: always
+
+JS:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - report-eslint.html
+    expire_in: 1 week
+    expose_as: 'ESLINT Report'
+  script:
+    - npm i vue
+    - npx vue-cli-service lint --format html --output-file report-eslint.html
+  rules:
+  - when: always
+
+CSS:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - report-stylelint.txt
+    expire_in: 1 week
+    expose_as: 'Stylelint Report'
+  script:
+    - npx stylelint 'src/**/*.css' --aei --formatter verbose --output-file report-stylelint.txt
+  rules:
+  - when: always
+
+Markdown:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - report-markdownlint.txt
+    expire_in: 1 week
+    expose_as: 'Markdownlint Report'
+  before_script:
+    - apk --no-cache add
+    - npm i -g markdownlint-cli
+  script:
+    - markdownlint '**/*.md' -o report-markdownlint.txt
+  rules:
+  - when: always
+
+Commits:
+  stage: Qualidade
+  artifacts:
+    when: always
+    paths:
+      - report-commitlint.txt
+    expire_in: 1 week
+    expose_as: 'Commitlint Report'
+  before_script:
+    - apk --no-cache add git
+    - npm i -g @govbr-ds/commit-config commitlint-gitlab-ci
+  script:
+    - commitlint-gitlab-ci -x @govbr-ds/commit-config > report-commitlint.txt
+  rules:
+  - when: always
+
+Instalar dependências:
+  stage: Dependências
+  script:
+    - apk --no-cache add git
+    - npm i
+  artifacts:
+    paths:
+      - node_modules
+    expire_in: 1 hour
+  rules:
+    - when: always
+
+Web Components:
+  stage: Build
+  needs: ['Instalar dependências']
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 day
+  script:
+    - npm i
+    - npm run build
+  rules:
+  - when: always
+
+pages:
+  stage: Storybook
+  needs: ['Web Components']
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 day
+    expose_as: 'Storybook Build'
+  before_script:
+    - npm i @storybook/vue3
+  script:
+    - rm -rf public
+    - npm run build:storybook
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "next"'
+
+Semantic Release:
+  stage: Release
+  environment:
+    name: production
+  needs: ['Web Components']
+  before_script:
+    - apk --no-cache add git zip
+  script:
+    - npx semantic-release
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: always
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "next" || $CI_COMMIT_REF_NAME =~ /\\d.(\\d|x).(\\d|x)(-alpha)?$/ || $CI_COMMIT_REF_NAME =~ /alpha$/'
+      when: manual

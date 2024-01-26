@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header - Search it calls "closeInputSearch" method 1`] = `
+<header
+  class="br-header mb-4 compact"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div>
+          <div
+            class="header-actions"
+            style="float: right;"
+          >
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+            <div
+              class="header-search-trigger"
+              style="display: block;"
+            >
+              <br-button-stub
+                active="false"
+                aria-label="Abrir Busca"
+                block="false"
+                circle="true"
+                data-target=".header-search"
+                data-toggle="search"
+                density="middle"
+                disabled="false"
+                icon="search"
+                inverted="false"
+                loading="false"
+              />
+            </div>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search"
+      >
+        <form>
+          <br-input-stub
+            autofocus="false"
+            icon="search"
+            iconsubmit="true"
+            id="searchbox4"
+            ishighlight="true"
+            ispassword="false"
+            label="Texto da pesquisa"
+            mask=""
+            newclass="has-icon"
+            placeholder="O que você procura?"
+          />
+          <br-button-stub
+            active="false"
+            aria-label="Fechar Busca"
+            block="false"
+            circle="true"
+            class="search-close ml-1"
+            data-dismiss="search"
+            density="middle"
+            disabled="false"
+            inverted="false"
+            loading="false"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header - Search it calls "closeInputSearch" method 2`] = `
+<header
+  class="br-header mb-4 compact"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      <div
+        slot="headerAction"
+      >
+        <div>
+          <div
+            class="header-actions"
+            style="float: right;"
+          >
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+            <div
+              class="header-search-trigger"
+              style="display: block;"
+            >
+              <br-button-stub
+                active="false"
+                aria-label="Abrir Busca"
+                block="false"
+                circle="true"
+                data-target=".header-search"
+                data-toggle="search"
+                density="middle"
+                disabled="false"
+                icon="search"
+                inverted="false"
+                loading="false"
+              />
+            </div>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search active"
+      >
+        <form>
+          <br-input-stub
+            autofocus="false"
+            icon="search"
+            iconsubmit="true"
+            id="searchbox4"
+            ishighlight="true"
+            ispassword="false"
+            label="Texto da pesquisa"
+            mask=""
+            newclass="has-icon"
+            placeholder="O que você procura?"
+          />
+          <br-button-stub
+            active="false"
+            aria-label="Fechar Busca"
+            block="false"
+            circle="true"
+            class="search-close ml-1"
+            data-dismiss="search"
+            density="middle"
+            disabled="false"
+            inverted="false"
+            loading="false"
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header - Search it renders BrHeadersearch 1`] = `
+<header
+  class="br-header mb-4"
+>
+  <div
+    class="container-lg"
+  >
+    <div
+      class="header-top"
+    >
+      <div
+        class="header-logo"
+      >
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      
+      
+    </div>
+    <div
+      class="header-bottom"
+    >
+      <div
+        class="header-menu"
+      >
+        <!--v-if-->
+        <div
+          class="header-info"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="header-search"
+      >
+        <br-header-search-stub
+          id="searchbox1"
+          label="Texto da pesquisa"
+          placeholder="O que você procura?"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;

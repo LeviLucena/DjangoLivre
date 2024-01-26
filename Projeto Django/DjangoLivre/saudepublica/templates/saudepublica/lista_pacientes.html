@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lista de Pacientes</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Adicione o link para o DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
+            <!-- Carregue as tags estáticas -->
+            {% load static %}
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+<div class="container">
+    <div class="row">
+        <!-- Div para o retângulo preto -->
+        <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
+            <!-- Logo -->
+            <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Lista de Pacientes</h1>
+
+    <!-- Adicione links para as outras listas -->
+    <p>
+        <a href="{% url 'lista_hospitais' %}" class="btn btn-primary">Lista de Hospitais</a>
+        <a href="{% url 'lista_pacientes' %}" class="btn btn-success">Lista de Pacientes</a>
+        <a href="{% url 'lista_registros_medicos' %}" class="btn btn-danger">Registros Médicos</a>
+        <a href="{% url 'pagina_inicial' %}" class="btn btn-link">Voltar ao Inicio</a>
+       <!-- <a href="{% url 'mapa_leitos' %}" class="btn btn-warning">Mapa dos Leitos</a>
+        <a href="{% url 'dashboards' %}" class="btn btn-dark">Dashboards</a>
+        <a href="{% url 'relatorio' %}" class="btn btn-secondary">Relatório</a> -->
+    </p>
+
+    {% if pacientes %}
+        <table id="pacientesTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Gênero</th>
+                    <th>Ações</th> <!-- Nova coluna para ações -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for paciente in pacientes %}
+                    <tr>
+                        <td>{{ paciente.nome }}</td>
+                        <td>{{ paciente.idade }} anos</td>
+                        <td>{{ paciente.genero }}</td>
+                        <td>
+                            <!-- Botão Ficha com ícone -->
+                            <a href="#" class="btn btn-info btn-sm" data-toggle="modal" data-target="#fichaModal{{ paciente.id }}">
+                                <span class="glyphicon glyphicon-file"></span> Ficha
+                            </a>
+                        
+                            <!-- Modal da Ficha -->
+                            <div class="modal fade" id="fichaModal{{ paciente.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <!-- ... (código do modal da ficha) ... -->
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="alert alert-info">Nenhum paciente cadastrado.</p>
+    {% endif %}
+
+    <!-- Botão para Adicionar Novo Paciente -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adicionarPacienteModal">
+    <i class="glyphicon glyphicon-plus"></i> Adicionar Novo Paciente
+</button>
+
+<!-- Modal para Adicionar Novo Paciente -->
+<div class="modal fade" id="adicionarPacienteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Conteúdo do formulário de adição -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Adicionar Novo Paciente</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário de adição -->
+                <form method="post" action="{% url 'adicionar_paciente' %}?next={{ request.path }}">
+                    {% csrf_token %}
+                    <!-- Adicione campos do formulário conforme necessário -->
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" name="idade" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Gênero:</label>
+                        <select name="genero" class="form-control" required>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                    </div>
+                    <!-- Adicione outros campos conforme necessário -->
+
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- Dentro do <style> ou no seu arquivo de estilos CSS -->
+<style>
+    #pacientesTable th:nth-child(4),
+    #pacientesTable td:nth-child(4) {
+        width: 80px; /* Defina a largura desejada para a coluna Ações */
+    }
+</style>
+
+<p>
+
+<!-- Rodapé -->
+<div class="container">
+    <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
+</div>
+
+<!-- Adicione os scripts do Bootstrap JS e DataTables (opcional, dependendo das suas necessidades) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Adicione o script do DataTables -->
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+
+<!-- Inicialize o DataTables -->
+<script>
+    $(document).ready(function() {
+        $('#pacientesTable').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
