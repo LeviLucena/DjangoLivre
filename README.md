@@ -35,10 +35,7 @@ Este é um sistema de gerenciamento para dados de saúde pública. Ele permite o
 
 | Imagem 1 | Imagem 2 | Imagem 3 |
 | ---------| ---------| ---------|
-|(![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/c25d3769-5886-495a-9a40-6ea5aa082b0d)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/4b8c5fd6-d57d-490f-a0b3-7ec07415437c)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/0b95b00f-350d-4960-9b3b-58b3cd29aa61)
-)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/c25d3769-5886-495a-9a40-6ea5aa082b0d) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/4b8c5fd6-d57d-490f-a0b3-7ec07415437c) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/0b95b00f-350d-4960-9b3b-58b3cd29aa61)
 
 | Imagem 4 | Imagem 5 | Imagem 6 |
 | ---------| ---------| ---------|
