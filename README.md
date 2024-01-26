@@ -39,26 +39,21 @@ Este é um sistema de gerenciamento para dados de saúde pública. Ele permite o
 
 | Imagem 4 | Imagem 5 | Imagem 6 |
 | ---------| ---------| ---------|
-|![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/94c7cbfa-38cc-43b8-bfe9-0805893fbe61)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/e98594b0-cb5f-4f69-935b-c71cb15fc9fd)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/1a519838-9f15-434c-a5d4-25225e90c925)
-)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/94c7cbfa-38cc-43b8-bfe9-0805893fbe61)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/e98594b0-cb5f-4f69-935b-c71cb15fc9fd)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/1a519838-9f15-434c-a5d4-25225e90c925)
 
 | Imagem 7 | Imagem 8 | Imagem 9 |
 | ---------| ---------| ---------|
-|![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/72a015b9-3f96-472b-aebf-e2f27ed241f5)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/29cae4f8-7cf1-4679-bdfa-695bef14e140)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/d5a51242-f33f-43c1-bc2c-03c7a991931d)
-)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/72a015b9-3f96-472b-aebf-e2f27ed241f5)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/29cae4f8-7cf1-4679-bdfa-695bef14e140)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/d5a51242-f33f-43c1-bc2c-03c7a991931d)
 
 | Imagem 10 | Imagem 11 | Imagem 12 |
 | ---------| ---------| ---------|
-|![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/595aeb57-809e-4e13-a980-c3588b098b81)
-)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/cf355545-7825-437d-b943-d56b8d2edb2f)
-)
-) | ![image](![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/1a7483e7-7767-44f8-acd4-91c55e4a0df6)
-)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/595aeb57-809e-4e13-a980-c3588b098b81)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/cf355545-7825-437d-b943-d56b8d2edb2f)
+| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/1a7483e7-7767-44f8-acd4-91c55e4a0df6)
 
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
