@@ -55,4 +55,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull re
 ## Licença
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
+Certifique-se de personalizar as seções com informações relevantes para o seu projeto. Se houver mais detalhes que deseja adicionar, sinta-se à vontade para expandir e melhorar o README conforme necessário.
+
 ## Autor: [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/levilucena/)](https://www.linkedin.com/in/levilucena/)
