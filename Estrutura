@@ -1,0 +1,57 @@
+A estrutura do meu site está assim
+DjangoLivre/
+|-- DjangoLivre/
+|   |-- _pycache_/
+|   |       |-- _init_.cpython-311.pyc
+|   |       |-- settings.cpython-311.pyc
+|   |       |-- urls.cpython-311.pyc
+|   |       |-- wsgi.cpython-311.pyc
+|   |-- settings.py
+|   |-- _init_.py
+|   |-- asgi.py
+|   |-- wsgi.py
+|   |-- urls.py
+|-- saudepublica/
+|   |-- _pycache_/
+|   |       |-- _init_.cpython-311.pyc
+|   |       |-- admin.cpython-311.pyc
+|   |       |-- apps.cpython-311.pyc
+|   |       |-- forms.cpython-311.pyc
+|   |       |-- models.cpython-311.pyc
+|   |       |-- urls.cpython-311.pyc
+|   |       |-- utils.cpython-311.pyc
+|   |       |-- views.cpython-311.pyc
+|   |-- migrations/
+|   |       |-- _pycache_
+|   |       |       |-- _init_.cpython-311.pyc
+|   |       |       |-- 0001_initial.cpython-311.pyc
+|   |       |       |-- 0002_usuario.cpython-311.pyc
+|   |       |-- _init_.py
+|   |       |-- 0001_initial.py
+|   |       |-- 0002_usuario.py
+|   |-- static/
+|   |       |-- saudepublica
+|   |       |       |-- logo.png
+|   |       |       |-- rodape.png
+|   |-- templates/
+|   |   |-- saudepublica/
+|   |       |-- lista_hospitais.html
+|   |       |-- lista_pacientes.html
+|   |       |-- lista_registros_medicos.html
+|   |       |-- adicionar_registro_medico.html
+|   |       |-- adicionar_paciente.html
+|   |       |-- login.html
+|   |       |-- inicio.html
+|   |       |-- mapa_leitos.html
+|   |       |-- relatorio.html
+|   |       |-- dashboards.html
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- forms.py
+|   |-- models.py
+|   |-- tests.py
+|   |-- urls.py
+|   |-- utils.py
+|   |-- views.py
+|-- manage.py
