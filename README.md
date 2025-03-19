@@ -1,4 +1,4 @@
-# Saúde Pública - Sistema de Gerenciamento
+# Saúde Pública - Sistema de Gerenciamento de Leitos Hospitalares
 
 ## Descrição
 Este é um sistema de gerenciamento para dados de saúde pública. Ele permite o registro de hospitais, pacientes e registros médicos, além de fornecer funcionalidades como mapas de leitos, dashboards e relatórios. *(Os dados aqui são fictícios gerados pela biblioteca faker)*
