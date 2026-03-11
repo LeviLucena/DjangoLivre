@@ -1,101 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mapa de Leitos</title>
-    <!-- Adicione os scripts do Bootstrap JS e DataTables -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
-    
-    <!-- Adicione os links para os estilos do Bootstrap e DataTables -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
+{% extends 'saudepublica/base.html' %}
 
-      <!-- Adicione a biblioteca Leaflet -->
-      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+{% block title %}Mapa de Leitos{% endblock %}
+{% block nav_mapa %}active{% endblock %}
+{% block breadcrumb %}<li class="breadcrumb-item active">Mapa de Leitos</li>{% endblock %}
+{% block page_title %}<i class="fas fa-map-marked-alt me-2" style="color:#8ec8f8;"></i>Mapa de Leitos{% endblock %}
+{% block page_subtitle %}Distribuição geográfica de leitos hospitalares{% endblock %}
 
-    <!-- Carregue as tags estáticas -->
-    {% load static %}
-</head>
-<body>
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+    #map {
+        height: 520px;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgba(0,0,0,.1);
+    }
+    .map-legend {
+        background: #fff;
+        border-radius: 10px;
+        padding: 16px 20px;
+        box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    }
+    .legend-dot {
+        width: 12px; height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 6px;
+    }
+</style>
+{% endblock %}
 
-    <!-- Cabeçalho -->
-    <div class="container">
-        <div class="row">
-            <!-- Div para o retângulo preto -->
-            <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
-                <!-- Logo -->
-                <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
+{% block content %}
+<div class="row g-4">
+    <div class="col-lg-9">
+        <div class="card-custom">
+            <div class="card-header-custom">
+                <i class="fas fa-map me-2"></i>Mapa Interativo — Hospitais e Leitos
+            </div>
+            <div class="card-body p-3">
+                <div id="map"></div>
             </div>
         </div>
     </div>
 
-    <!-- Adicione uma nova seção para a tabela -->
-    <div class="container">
-        <h1>Mapa de Leitos</h1>
-
-        <!-- Adicione links para as outras listas -->
-        <p>
-            <a href="{% url 'mapa_leitos' %}" class="btn btn-warning">Mapa de Leitos</a>
-            <a href="{% url 'dashboards' %}" class="btn btn-info">Dashboards</a>
-            <a href="{% url 'relatorio' %}" class="btn btn-info">Relatórios</a>
-            <a href="{% url 'pagina_inicial' %}" class="btn btn-link">Voltar ao Inicio</a>
-        </p>
+    <div class="col-lg-3">
+        <div class="card-custom h-100">
+            <div class="card-header-custom">
+                <i class="fas fa-info-circle me-2"></i>Legenda
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">Capacidade de leitos por hospital</p>
+                <div class="d-flex align-items-center mb-2">
+                    <span class="legend-dot" style="background:#e74c3c;"></span>
+                    <span class="small">Alta capacidade (&gt; 300)</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <span class="legend-dot" style="background:#f39c12;"></span>
+                    <span class="small">Média capacidade (150–300)</span>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <span class="legend-dot" style="background:#2ecc71;"></span>
+                    <span class="small">Baixa capacidade (&lt; 150)</span>
+                </div>
+                <hr>
+                <p class="small text-muted mt-3">
+                    <i class="fas fa-mouse-pointer me-1"></i>Clique nos marcadores para ver os detalhes do hospital.
+                </p>
+                <p class="small text-muted">
+                    <i class="fas fa-search-plus me-1"></i>Use scroll ou os botões +/− para zoom.
+                </p>
+            </div>
+        </div>
     </div>
+</div>
+{% endblock %}
 
-    <!-- Conteúdo específico para o mapa de leitos vai aqui -->
-    <div id="map" style="height: 400px;" class="container"></div>
-
-    <!-- Rodapé -->
-    <div class="container">
-        <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
-    </div>
-
-    <!-- Inicialize o DataTables -->
-    <script>
-        $(document).ready(function() {
-            $('#hospitaisTable').DataTable({
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-                }
-            });
-        });
-    </script>
-
-<!-- Inicialize o mapa -->
+{% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Crie um mapa com Leaflet e use tiles do OpenStreetMap
-    var mymap = L.map('map').setView([-23.5505, -46.6333], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(mymap);
+    var map = L.map('map').setView([-23.5505, -46.6333], 11);
 
-    // Função para gerar coordenadas aleatórias dentro de uma área específica
-    function getRandomCoordinates(center, radius, numPoints) {
-        var coordinates = [];
-        for (var i = 0; i < numPoints; i++) {
-            var angle = Math.random() * Math.PI * 2;
-            var distance = Math.random() * radius;
-            var latitude = center[0] + distance * Math.cos(angle);
-            var longitude = center[1] + distance * Math.sin(angle);
-            coordinates.push([latitude, longitude]);
-        }
-        return coordinates;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+    }).addTo(map);
+
+    function getColor(leitos) {
+        if (leitos > 300)  return '#e74c3c';
+        if (leitos > 150)  return '#f39c12';
+        return '#2ecc71';
     }
 
-    // Adicione marcadores para hospitais (exemplo fictício)
-    var hospitalCoordinates = getRandomCoordinates([-23.5505, -46.6333], 0.2, 20);
+    function getRadius(leitos) {
+        if (leitos > 300)  return 14;
+        if (leitos > 150)  return 10;
+        return 7;
+    }
 
-    hospitalCoordinates.forEach(function (coord, index) {
-        var hospitalMarker = L.marker(coord).addTo(mymap);
-        hospitalMarker.bindPopup("<b>Hospital " + (index + 1) + "</b><br>Capacidade de Leitos: " + Math.floor(Math.random() * 200));
+    function getRandomCoord(center, radius) {
+        var angle = Math.random() * Math.PI * 2;
+        var dist  = Math.random() * radius;
+        return [center[0] + dist * Math.cos(angle), center[1] + dist * Math.sin(angle)];
+    }
+
+    var center = [-23.5505, -46.6333];
+    var hospitals = [
+        {% for h in hospitais %}
+        { nome: "{{ h.nome|escapejs }}", leitos: {{ h.capacidade_leitos }}, tel: "{{ h.telefone|escapejs }}" },
+        {% endfor %}
+    ];
+
+    hospitals.forEach(function(h) {
+        var coord  = getRandomCoord(center, 0.18);
+        var color  = getColor(h.leitos);
+        var radius = getRadius(h.leitos);
+
+        L.circleMarker(coord, {
+            radius: radius,
+            fillColor: color,
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.85
+        }).addTo(map).bindPopup(
+            '<b>' + h.nome + '</b><br>' +
+            '<i class="fas fa-bed"></i> Leitos: <strong>' + h.leitos + '</strong><br>' +
+            '<i class="fas fa-phone"></i> ' + h.tel
+        );
     });
 </script>
-
-
-</body>
-</html>
+{% endblock %}

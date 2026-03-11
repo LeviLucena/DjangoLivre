@@ -1,193 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mapa de Leitos</title>
-    <!-- Adicione os scripts do Bootstrap JS e DataTables -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+{% extends 'saudepublica/base.html' %}
 
-    
-    <!-- Adicione os links para os estilos do Bootstrap e DataTables -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+{% block title %}Relatório Geral{% endblock %}
+{% block nav_relatorio %}active{% endblock %}
+{% block breadcrumb %}<li class="breadcrumb-item active">Relatório</li>{% endblock %}
+{% block page_title %}<i class="fas fa-file-invoice me-2" style="color:#8ec8f8;"></i>Relatório Geral{% endblock %}
+{% block page_subtitle %}Exportação e análise completa dos dados{% endblock %}
 
-    
-    <!-- Carregue as tags estáticas -->
-    {% load static %}
-</head>
-<body>
+{% block extra_css %}
+<link href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css" rel="stylesheet">
+{% endblock %}
 
-    <!-- Cabeçalho -->
-    <div class="container">
-        <div class="row">
-            <!-- Div para o retângulo preto -->
-            <div class="col-md-3 mx-auto text-center" style="background-color: black; border-top-right-radius: 45px; border-bottom-right-radius: 45px; padding: 20px;">
-                <!-- Logo -->
-                <img src="{% static 'saudepublica/logo.png' %}" alt="Logo" class="img-responsive center-block" style="width: 80%;">
-            </div>
+{% block content %}
+
+<!-- Pacientes -->
+<div class="card-custom mb-4">
+    <div class="card-header-custom">
+        <i class="fas fa-user-injured me-2"></i>Pacientes
+        <span class="badge bg-light text-dark ms-2">{{ pacientes.count }}</span>
+    </div>
+    <div class="card-body">
+        {% if pacientes %}
+        <div class="table-responsive">
+            <table id="pacientesTable" class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Nome</th><th>Idade</th><th>Gênero</th><th>Telefone</th><th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in pacientes %}
+                    <tr>
+                        <td><strong>{{ p.nome }}</strong></td>
+                        <td>{{ p.idade }} anos</td>
+                        <td>{{ p.genero }}</td>
+                        <td>{{ p.telefone }}</td>
+                        <td>{{ p.endereco }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
+        {% else %}
+        <div class="alert alert-info mb-0"><i class="fas fa-info-circle me-2"></i>Nenhum paciente cadastrado.</div>
+        {% endif %}
     </div>
-
-    <!-- Adicione uma nova seção para a tabela -->
-    <div class="container">
-        <h1>Relatório Geral da Gestão de Saúde</h1>
-
-        <!-- Adicione links para as outras listas -->
-        <p>
-            <a href="{% url 'mapa_leitos' %}" class="btn btn-warning">Mapa de Leitos</a>
-            <a href="{% url 'dashboards' %}" class="btn btn-info">Dashboards</a>
-            <a href="{% url 'relatorio' %}" class="btn btn-info">Relatórios</a>
-            <a href="{% url 'pagina_inicial' %}" class="btn btn-link">Voltar ao Inicio</a>
-        </p>
-    </div>
-
-    <!-- Conteúdo específico para o mapa de leitos vai aqui -->
-     <!-- Conteúdo específico para o relatório de pacientes -->
-<!-- Conteúdo específico para o relatório de pacientes -->
-<!-- Conteúdo específico para o relatório de pacientes -->
-<div class="container">
-    <h2>Pacientes</h2>
-    {% if pacientes %}
-        <table id="pacientesTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Gênero</th>
-                    <!-- Adicione mais colunas conforme necessário -->
-                </tr>
-            </thead>
-            <tbody>
-                {% for paciente in pacientes %}
-                    <tr>
-                        <td>{{ paciente.nome }}</td>
-                        <td>{{ paciente.idade }} anos</td>
-                        <td>{{ paciente.genero }}</td>
-                        <!-- Adicione mais colunas conforme necessário -->
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p class="alert alert-info">Nenhum paciente cadastrado.</p>
-    {% endif %}
 </div>
 
-<!-- Conteúdo específico para o relatório de hospitais -->
-<div class="container">
-    <h2>Hospitais</h2>
-    {% if hospitais %}
-        <table id="hospitaisTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Capacidade de Leitos</th>
-                    <!-- Adicione mais colunas conforme necessário -->
-                </tr>
-            </thead>
-            <tbody>
-                {% for hospital in hospitais %}
-                    <tr>
-                        <td>{{ hospital.nome }}</td>
-                        <td>{{ hospital.capacidade_leitos }}</td>
-                        <!-- Adicione mais campos conforme necessário -->
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p class="alert alert-info">Nenhum hospital cadastrado.</p>
-    {% endif %}
-</div>
-
-    <!-- Conteúdo específico para o relatório de registros médicos -->
-
-<div class="container">
-    <h2>Registros Médicos</h2>
-    {% if registros_medicos %}
-        <table id="registrosMedicosTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Paciente</th>
-                    <th>Hospital</th>
-                    <th>Data de Entrada</th>
-                    <th>Sintomas</th>
-                    <th>Diagnóstico</th>
-                    <th>Tratamento</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for registro_medico in registros_medicos %}
-                    <tr>
-                        <td>{{ registro_medico.paciente.nome }}</td>
-                        <td>{{ registro_medico.hospital.nome }}</td>
-                        <td>{{ registro_medico.data_entrada }}</td>
-                        <td>{{ registro_medico.sintomas }}</td>
-                        <td>{{ registro_medico.diagnostico }}</td>
-                        <td>{{ registro_medico.tratamento }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p class="alert alert-info">Nenhum registro médico cadastrado.</p>
-    {% endif %}
-</div>
-
-    <!-- Rodapé -->
-    <div class="container">
-        <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé" class="img-responsive" style="width: 100%;">
+<!-- Hospitais -->
+<div class="card-custom mb-4">
+    <div class="card-header-custom">
+        <i class="fas fa-hospital me-2"></i>Hospitais
+        <span class="badge bg-light text-dark ms-2">{{ hospitais.count }}</span>
     </div>
+    <div class="card-body">
+        {% if hospitais %}
+        <div class="table-responsive">
+            <table id="hospitaisTable" class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Nome</th><th>Endereço</th><th>Telefone</th><th>Leitos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for h in hospitais %}
+                    <tr>
+                        <td><strong>{{ h.nome }}</strong></td>
+                        <td>{{ h.endereco }}</td>
+                        <td>{{ h.telefone }}</td>
+                        <td><span class="badge bg-primary">{{ h.capacidade_leitos }}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="alert alert-info mb-0"><i class="fas fa-info-circle me-2"></i>Nenhum hospital cadastrado.</div>
+        {% endif %}
+    </div>
+</div>
 
-<!-- Inicialize o DataTables para Hospitais -->
+<!-- Registros Médicos -->
+<div class="card-custom mb-4">
+    <div class="card-header-custom">
+        <i class="fas fa-file-medical-alt me-2"></i>Registros Médicos
+        <span class="badge bg-light text-dark ms-2">{{ registros_medicos.count }}</span>
+    </div>
+    <div class="card-body">
+        {% if registros_medicos %}
+        <div class="table-responsive">
+            <table id="registrosTable" class="table table-striped table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Paciente</th><th>Hospital</th><th>Data</th><th>Sintomas</th><th>Diagnóstico</th><th>Tratamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in registros_medicos %}
+                    <tr>
+                        <td><strong>{{ r.paciente.nome }}</strong></td>
+                        <td>{{ r.hospital.nome }}</td>
+                        <td>{{ r.data_entrada }}</td>
+                        <td>{{ r.sintomas }}</td>
+                        <td>{{ r.diagnostico }}</td>
+                        <td>{{ r.tratamento }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="alert alert-info mb-0"><i class="fas fa-info-circle me-2"></i>Nenhum registro médico cadastrado.</div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#hospitaisTable').DataTable({
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-            },
-            "dom": 'Bfrtip',
-            "buttons": [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
-        });
-    });
-
-    // Inicialize o DataTables para Pacientes
-    $('#pacientesTable').DataTable({
-        "language": {
-            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-        },
-        "dom": 'Bfrtip',
-        "buttons": [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-    });
-
-    // Inicialize o DataTables para Registros Médicos
-    $(document).ready(function() {
-        $('#registrosMedicosTable').DataTable({
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
-            },
-            "dom": 'Bfrtip',
-            "buttons": [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
-        });
-    });
+var dtConfig = {
+    language: { url: '//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json' },
+    pageLength: 10,
+    dom: 'Bfrtip',
+    buttons: ['copy','csv','excel','print']
+};
+$(document).ready(function() {
+    $('#pacientesTable').DataTable(dtConfig);
+    $('#hospitaisTable').DataTable(dtConfig);
+    $('#registrosTable').DataTable(dtConfig);
+});
 </script>
-
-    
-
-</body>
-</html>
+{% endblock %}

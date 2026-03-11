@@ -1,5 +1,6 @@
 # Create your models here.
 from django.db import models
+from django.contrib.auth.hashers import make_password
 
 class Hospital(models.Model):
     nome = models.CharField(max_length=100)

@@ -5,9 +5,9 @@ import json
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
-from django.db import models  # Certifique-se de que 'models' esteja importado
+from django.db import models
 from django.contrib import messages
-from .utils import create_test_users
+from django.contrib.auth.hashers import check_password
 
 
 # Importe bibliotecas de terceiros
@@ -22,9 +22,6 @@ from .models import Usuario
 
 fake = Faker()
 
-# Chama a função para criar usuários de teste
-create_test_users()
-
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -32,30 +29,31 @@ def login_view(request):
 
         try:
             usuario = Usuario.objects.get(username=username)
-            # Verifica a senha (você pode usar uma biblioteca de hash como bcrypt ou argon2)
-            if usuario.password == password:
-                # Autenticação bem-sucedida
-                # Adicione lógica adicional conforme necessário, como a criação de uma sessão
+            if check_password(password, usuario.password):
                 messages.success(request, 'Login bem-sucedido!')
-                return redirect('pagina_inicial')  # Redireciona para a página principal após o login
+                return redirect('pagina_inicial')
             else:
                 messages.error(request, 'Usuário e/ou senha inválidos. Tente novamente!')
         except Usuario.DoesNotExist:
             messages.error(request, 'Usuário e/ou senha inválidos. Tente novamente!')
 
-    return render(request, 'saudepublica/login.html')
-
-# Função para gerar a página inicial
-# def login(request):
-#    return render(request, 'saudepublica/login.html')
+    return render(request, 'accounts/login.html')
 
 # Função para gerar a página inicial
 def pagina_inicial(request):
-    return render(request, 'saudepublica/inicio.html')
+    context = {
+        'total_hospitais': Hospital.objects.count(),
+        'total_pacientes': Paciente.objects.count(),
+        'total_registros': RegistroMedico.objects.count(),
+    }
+    return render(request, 'saudepublica/inicio.html', context)
 
 # Função para gerar relatório
 def mapa_leitos(request):
-    return render(request, 'saudepublica/mapa_leitos.html')
+    if Hospital.objects.count() == 0:
+        generate_fake_hospitals(num_hospitals=50)
+    hospitais = Hospital.objects.all()
+    return render(request, 'saudepublica/mapa_leitos.html', {'hospitais': hospitais})
 
 # Função para gerar relatório
 def dashboards(request):
@@ -127,11 +125,12 @@ def generate_fake_hospitals(num_hospitals=50):
     for _ in range(num_hospitals):
         hospital = Hospital(
             nome=fake.company(),
-            endereco=fake.address(),
+            endereco=fake.address().replace('\n', ', '),
+            telefone=fake.numerify(text='(##) #####-####'),
             capacidade_leitos=fake.random_int(min=50, max=500)
         )
         hospitals.append(hospital)
-    Hospital.objects.bulk_create(hospitals)
+    return Hospital.objects.bulk_create(hospitals)
 
 # Função para gerar pacientes fictícios
 def generate_fake_pacientes(num_pacientes=200):
@@ -139,19 +138,26 @@ def generate_fake_pacientes(num_pacientes=200):
     for _ in range(num_pacientes):
         paciente = Paciente(
             nome=fake.name(),
-            idade=fake.random_int(min=50, max=100),
-            genero=fake.random_element(elements=('Masculino', 'Feminino'))
+            idade=fake.random_int(min=1, max=100),
+            genero=fake.random_element(elements=('Masculino', 'Feminino')),
+            endereco=fake.address().replace('\n', ', '),
+            telefone=fake.numerify(text='(##) #####-####'),
+            historico_medico=fake.text(max_nb_chars=200)
         )
         pacientes.append(paciente)
-    Paciente.objects.bulk_create(pacientes)
+    return Paciente.objects.bulk_create(pacientes)
 
 # Função para gerar registros médicos fictícios
 def generate_fake_registros_medicos(num_registros=150):
+    pacientes = list(Paciente.objects.all())
+    hospitais = list(Hospital.objects.all())
+    if not pacientes or not hospitais:
+        return
     registros_medicos = []
     for _ in range(num_registros):
         registro_medico = RegistroMedico(
-            paciente=generate_fake_pacientes(1)[0],  # Pega um paciente fictício
-            hospital=generate_fake_hospitals(1)[0],  # Pega um hospital fictício
+            paciente=fake.random_element(elements=pacientes),
+            hospital=fake.random_element(elements=hospitais),
             data_entrada=fake.date_this_decade(),
             sintomas=fake.sentence(),
             diagnostico=fake.sentence(),

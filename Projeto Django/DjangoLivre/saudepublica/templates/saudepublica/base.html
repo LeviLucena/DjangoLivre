@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Gestão de Saúde Pública{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --azul:    #1a6fc4;
+            --verde:   #1a9e5f;
+            --roxo:    #7b3fa6;
+            --laranja: #e07b00;
+            --vermelho:#c0392b;
+            --cinza:   #2c3e50;
+        }
+        body { background: #f0f4f8; font-family: 'Segoe UI', sans-serif; }
+
+        /* ── NAVBAR ── */
+        .navbar-custom {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%);
+            box-shadow: 0 2px 12px rgba(0,0,0,.4);
+        }
+        .navbar-custom .navbar-brand img { height: 44px; }
+        .navbar-custom .navbar-brand span {
+            font-size: 1.05rem; font-weight: 600;
+            color: #e8f4fd; letter-spacing: .5px;
+        }
+        .navbar-custom .nav-link { color: #c8dff0 !important; font-size: .88rem; transition: color .2s; }
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link.active { color: #fff !important; }
+
+        /* ── PAGE HEADER ── */
+        .page-header {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 60%, #1a6fc4 100%);
+            color: #fff;
+            padding: 32px 0 28px;
+        }
+        .page-header h2 { font-size: 1.7rem; font-weight: 700; margin: 0; }
+        .page-header p  { opacity: .75; margin: 4px 0 0; font-size: .92rem; }
+
+        /* ── BREADCRUMB ── */
+        .breadcrumb-custom { background: transparent; padding: 0; margin: 6px 0 0; }
+        .breadcrumb-custom .breadcrumb-item a { color: #8ec8f8; text-decoration: none; }
+        .breadcrumb-custom .breadcrumb-item.active { color: #c8dff0; }
+        .breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before { color: #5a90b8; }
+
+        /* ── CARD PADRÃO ── */
+        .card-custom {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,.07);
+            border: none;
+        }
+        .card-custom .card-header-custom {
+            background: linear-gradient(135deg, #0d1b2a, #1a3a5c);
+            color: #fff;
+            border-radius: 14px 14px 0 0;
+            padding: 16px 22px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .card-custom .card-body { padding: 24px; }
+
+        /* ── BOTÕES NAV ── */
+        .btn-nav-group .btn { border-radius: 8px; font-size: .85rem; font-weight: 500; }
+
+        /* ── TABELAS ── */
+        .table thead th {
+            background: #1a3a5c;
+            color: #fff;
+            font-weight: 600;
+            font-size: .85rem;
+            border: none;
+            white-space: nowrap;
+        }
+        .table tbody tr:hover { background: #f0f6ff; }
+        .table td { vertical-align: middle; font-size: .88rem; }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #0d1b2a;
+            color: #7fa3c0;
+            font-size: .82rem;
+            padding: 18px 0;
+            margin-top: 60px;
+        }
+        footer img { height: 34px; opacity: .7; }
+
+        /* ── MISC ── */
+        .section-divider {
+            border: none;
+            border-top: 2px solid #e2e8f0;
+            margin: 28px 0;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'pagina_inicial' %}">
+            <img src="{% static 'saudepublica/logo.png' %}" alt="Logo">
+            <span>Gestão de Saúde Pública</span>
+        </a>
+        <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto gap-1">
+                <li class="nav-item"><a class="nav-link {% block nav_inicio %}{% endblock %}" href="{% url 'pagina_inicial' %}"><i class="fas fa-home me-1"></i>Início</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_hospitais %}{% endblock %}" href="{% url 'lista_hospitais' %}"><i class="fas fa-hospital me-1"></i>Hospitais</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_pacientes %}{% endblock %}" href="{% url 'lista_pacientes' %}"><i class="fas fa-user me-1"></i>Pacientes</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_registros %}{% endblock %}" href="{% url 'lista_registros_medicos' %}"><i class="fas fa-file-medical me-1"></i>Registros</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_mapa %}{% endblock %}" href="{% url 'mapa_leitos' %}"><i class="fas fa-bed me-1"></i>Mapa</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_dashboards %}{% endblock %}" href="{% url 'dashboards' %}"><i class="fas fa-chart-bar me-1"></i>Dashboards</a></li>
+                <li class="nav-item"><a class="nav-link {% block nav_relatorio %}{% endblock %}" href="{% url 'relatorio' %}"><i class="fas fa-file-alt me-1"></i>Relatório</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER (pode ser sobrescrito) -->
+{% block page_header %}
+<div class="page-header">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-custom">
+                <li class="breadcrumb-item"><a href="{% url 'pagina_inicial' %}"><i class="fas fa-home me-1"></i>Início</a></li>
+                {% block breadcrumb %}{% endblock %}
+            </ol>
+        </nav>
+        <h2>{% block page_title %}{% endblock %}</h2>
+        <p>{% block page_subtitle %}{% endblock %}</p>
+    </div>
+</div>
+{% endblock %}
+
+<!-- CONTEÚDO -->
+{% block content_wrapper %}
+<div class="container py-4">
+    {% block content %}{% endblock %}
+</div>
+{% endblock %}
+
+<!-- FOOTER -->
+<footer>
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+        <img src="{% static 'saudepublica/rodape.png' %}" alt="Rodapé">
+        <span>Sistema de Gestão de Saúde Pública</span>
+        <span><i class="fas fa-shield-alt me-1"></i> Dados fictícios para demonstração</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
