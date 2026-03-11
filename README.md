@@ -18,29 +18,11 @@
 
 ---
 
-## 📋 Índice
-
-- [Visão Geral](#-visão-geral)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias](#-tecnologias)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Instalação](#-instalação)
-- [Como Usar](#-como-usar)
-- [Modelos de Dados](#-modelos-de-dados)
-- [Rotas da Aplicação](#-rotas-da-aplicação)
-- [Screenshots](#-screenshots)
-- [Referências](#-referências)
-- [Contribuição](#-contribuição)
-- [Licença](#-licença)
-- [Autor](#-autor)
-
----
-
 ## 🌐 Visão Geral
 
 O **Sistema de Gestão de Saúde Pública** é uma aplicação web Django que centraliza informações hospitalares em uma interface moderna e responsiva. A plataforma oferece um painel de controle completo com navegação intuitiva, contadores em tempo real, gráficos interativos e exportação de dados.
 
-![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/3a41c484-e679-4ed3-b115-81893589a7a2)
+<img width="1339" height="913" alt="image" src="https://github.com/user-attachments/assets/3982b650-a371-49b4-bff0-f6108be8ea32" />
 
 ---
 
@@ -259,19 +241,19 @@ class Usuario(models.Model):
 
 | Imagem 1 | Imagem 2 | Imagem 3 |
 |----------|----------|----------|
-| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/c25d3769-5886-495a-9a40-6ea5aa082b0d) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/e26a21e3-6cdc-4dfa-8bfa-9de824c3f482) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/0b95b00f-350d-4960-9b3b-58b3cd29aa61) |
+| ![image](https://github.com/user-attachments/assets/970431dc-1a97-4f90-a294-723a42818427) | ![image](https://github.com/user-attachments/assets/879c8520-e371-400e-ac6f-b7bd0dced6bd) | ![image](https://github.com/user-attachments/assets/7a6e50cf-ec0d-4ab0-b74f-7340f233264d) |
 
 | Imagem 4 | Imagem 5 | Imagem 6 |
 |----------|----------|----------|
-| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/94c7cbfa-38cc-43b8-bfe9-0805893fbe61) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/e98594b0-cb5f-4f69-935b-c71cb15fc9fd) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/1a519838-9f15-434c-a5d4-25225e90c925) |
+| ![image](https://github.com/user-attachments/assets/4cbc78be-7f2f-4b29-8395-190fad64535c) | ![image](https://github.com/user-attachments/assets/5174f2bf-f495-4d60-b0c7-b62ee0047b14) | ![image](https://github.com/user-attachments/assets/470325ab-e7c4-4084-bdb8-c5121e05f0a5) |
 
 | Imagem 7 | Imagem 8 | Imagem 9 |
 |----------|----------|----------|
-| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/72a015b9-3f96-472b-aebf-e2f27ed241f5) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/29cae4f8-7cf1-4679-bdfa-695bef14e140) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/d5a51242-f33f-43c1-bc2c-03c7a991931d) |
+| ![image](https://github.com/user-attachments/assets/e49bc254-8013-4960-b2a1-b77318b055f0) | ![image](https://github.com/user-attachments/assets/6e585168-226e-43fc-852f-e37f8f7324aa) | ![image](https://github.com/user-attachments/assets/ca58485a-d0cd-4953-8b1c-d9e5357b90f7) |
 
 | Imagem 10 | Imagem 11 | Imagem 12 |
 |-----------|-----------|-----------|
-| ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/595aeb57-809e-4e13-a980-c3588b098b81) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/cf355545-7825-437d-b943-d56b8d2edb2f) | ![image](https://github.com/LeviLucena/DjangoLivre/assets/34045910/1a7483e7-7767-44f8-acd4-91c55e4a0df6) |
+| ![image](https://github.com/user-attachments/assets/e7abccee-52d7-44e8-b154-05c99f17f7dd) | ![image](https://github.com/user-attachments/assets/8db72ca8-fa21-41b6-bca8-5f07aae5246b) | ![image](https://github.com/user-attachments/assets/5e9833bc-7592-4ffd-a684-c00261960c13) |
 
 ---
 
